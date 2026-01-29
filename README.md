@@ -180,38 +180,27 @@ Crowdsourced energy wastage reporting and eco-commute tracking.
 
 ## 🎥 Product Demo
 
-### 📹 Full Demonstration Video
+### 📹 Complete Presentation & System Walkthrough
 
 <div align="center">
 
-[![Watch Full Demo](https://img.shields.io/badge/▶️_WATCH_FULL_DEMO_VIDEO-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](NeuralRail1/GDG_Final.mp4)
+![NeuralRail Complete Demo](NeuralRail1/assets/GDG_Final-ezgif.com-gif-maker.gif)
 
-**👆 Click above to watch the complete presentation video**
-
-<table>
-<tr>
-<td width="50%">
-<img src="NeuralRail1/screenshot/image.png" width="100%"/>
-<p align="center"><b>🖥️ Web Dashboard Demo</b></p>
-</td>
-<td width="50%">
-<img src="AndroidApp1/NeuralRailApp/screenshot/Screenshot_20260125-081121.png" width="100%"/>
-<p align="center"><b>📱 Android App Demo</b></p>
-</td>
-</tr>
-</table>
+**☝️ Full presentation covering all features, scenarios, and impact**
 
 </div>
 
-> 🎬 **Video Contents:**
-> - ✅ Live conflict detection and resolution
-> - ✅ AI decision-making process with energy calculations
+> 🎬 **What's Covered in the Demo:**
+> - ✅ Problem statement and market research
+> - ✅ Live conflict detection and AI resolution
+> - ✅ Energy optimization calculations
 > - ✅ Real-time dashboard visualization
 > - ✅ Android app features (QR scanner, AI reporting)
 > - ✅ All 5 demo scenarios walkthrough
-> - ✅ Energy savings dashboard in action
+> - ✅ Measurable impact and savings
+> - ✅ Business model and roadmap
 >
-> 📥 **Download:** [GDG_Final.mp4](NeuralRail1/GDG_Final.mp4) (Right-click → Save As)
+> 📥 **Full Video:** [Download GDG_Final.mp4](NeuralRail1/GDG_Final.mp4) for high-quality version
 
 ---
 
