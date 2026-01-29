@@ -1,0 +1,559 @@
+<resources>
+    <string name="app_name">NeuralRail</string>
+    
+    <!-- Common -->
+    <string name="loading">Loading...</string>
+    <string name="error">Error</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="close">Close</string>
+    <string name="back">Back</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="days">days</string>
+    <string name="live">LIVE</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_trains">Trains</string>
+    <string name="nav_scan">Scan</string>
+    <string name="nav_challenges">Challenges</string>
+    <string name="nav_more">More</string>
+    
+    <!-- Home Screen -->
+    <string name="eco_smart_travel">Eco-Smart Travel</string>
+    <string name="your_environmental_impact">Your Environmental Impact</string>
+    <string name="kg_co2">kg CO₂</string>
+    <string name="saved_this_month">saved this month</string>
+    <string name="trips">Trips</string>
+    <string name="trees">Trees</string>
+    <string name="badges">Badges</string>
+    <string name="quick_services">Quick Services</string>
+    <string name="book_ticket">Book Ticket</string>
+    <string name="energy">Energy</string>
+    <string name="support">Support</string>
+    <string name="learn">Learn</string>
+    <string name="search_trains_stations">Search trains, stations...</string>
+    <string name="search_results">Search Results</string>
+    <string name="clear">Clear</string>
+    <string name="no_results_found">No results found</string>
+    <string name="try_different_search">Try a different search term</string>
+    <string name="train_status_desc">Live train tracking</string>
+    <string name="smart_planner_desc">Plan eco-friendly trips</string>
+    <string name="live_energy_desc">Real-time energy monitoring</string>
+    <string name="carbon_offset_desc">Neutralize your footprint</string>
+    <string name="education_hub_desc">Learn sustainability</string>
+    <string name="community_watch_desc">Report energy waste</string>
+    <string name="challenges_desc">Compete &amp; earn rewards</string>
+    <string name="qr_scanner_desc">Scan tickets &amp; info</string>
+    
+    <!-- Report Problem / Community Watch -->
+    <string name="report_problem">Report Problem</string>
+    <string name="report_and_track">Report &amp; track issues</string>
+    <string name="community_impact">Community Impact</string>
+    <string name="together_making_difference">Together we\'re making a difference!</string>
+    <string name="reports">Reports</string>
+    <string name="resolved">Resolved</string>
+    <string name="quick_report">Quick Report</string>
+    <string name="tap_to_report">Tap to report common issues</string>
+    <string name="lights">Lights</string>
+    <string name="ac">AC</string>
+    <string name="solar">Solar</string>
+    <string name="engine">Engine</string>
+    <string name="recent_reports">Recent Reports</string>
+    <string name="all">All</string>
+    <string name="pending">Pending</string>
+    <string name="investigating">Investigating</string>
+    <string name="report_issue">Report Issue</string>
+    <string name="report_energy_waste">Report Energy Waste</string>
+    <string name="help_save_resources">Help save resources</string>
+    <string name="issue_type">Issue Type</string>
+    <string name="location_hint">Location</string>
+    <string name="description_optional">Description (optional)</string>
+    <string name="submit">Submit</string>
+    <string name="upvoted_report">Upvoted report</string>
+    <string name="report_submitted">Report submitted successfully</string>
+    <string name="no_reports_found">No reports found</string>
+    <string name="be_first_report">Be the first to report an issue!</string>
+    <string name="kwh">kWh</string>
+    
+    <!-- Green Challenges -->
+    <string name="green_challenges">Green Challenges</string>
+    <string name="earn_points_leaderboard">Earn points &amp; climb the leaderboard</string>
+    <string name="points">Points</string>
+    <string name="streak">Streak</string>
+    <string name="rank">Rank</string>
+    <string name="streak_progress">Streak Progress</string>
+    <string name="best_days">Best: %d days</string>
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="longest">Longest</string>
+    <string name="active_challenges">🔥 Active Challenges</string>
+    <string name="available_missions">Available Missions</string>
+    <string name="complete_challenges_earn">Complete challenges to earn points</string>
+    <string name="accept_challenge">Accept Challenge</string>
+    <string name="abandon">Abandon</string>
+    <string name="share">Share</string>
+    <string name="add_progress">Add Progress (+1)</string>
+    <string name="progress">Progress</string>
+    <string name="completed">Completed!</string>
+    <string name="in_progress">In Progress</string>
+    <string name="challenge_accepted">Challenge Accepted!</string>
+    <string name="good_luck_complete">Good luck! Complete the challenge to earn your points.</string>
+    <string name="lets_go">Let\'s Go!</string>
+    <string name="abandon_challenge">Abandon Challenge?</string>
+    <string name="progress_will_be_lost">Your progress will be lost and you won\'t earn points for this challenge.</string>
+    <string name="keep_going">Keep Going</string>
+    <string name="share_progress">Share Progress</string>
+    <string name="share_now">Share Now</string>
+    <string name="weekly_leaderboard">Weekly Leaderboard</string>
+    <string name="category">Category</string>
+    <string name="type">Type</string>
+    <string name="challenge_details">Challenge Details</string>
+    <string name="expires">Expires</string>
+    <string name="target">Target</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="day_streak">day streak</string>
+    <string name="pts">pts</string>
+    <string name="special">Special</string>
+    <string name="community">Community</string>
+    <string name="travel">Travel</string>
+    <string name="walk">Walk</string>
+    <string name="off_peak">Off Peak</string>
+    
+    <!-- QR Scanner -->
+    <string name="qr_scanner">QR Scanner</string>
+    <string name="scan_tickets_info">Scan tickets &amp; train info</string>
+    <string name="point_camera_qr">Point camera at QR code</string>
+    <string name="turn_on_flashlight">Turn On Flashlight</string>
+    <string name="turn_off_flashlight">Turn Off Flashlight</string>
+    <string name="scan_another_qr">Scan Another QR Code</string>
+    <string name="train_information">Train Information</string>
+    <string name="scanned_from_qr">Scanned from QR</string>
+    <string name="energy_sustainability">Energy &amp; Sustainability</string>
+    <string name="electric_train">Electric Train</string>
+    <string name="camera_permission_required">Camera Permission Required</string>
+    <string name="grant_camera_permission">To scan QR codes, please grant camera permission</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="ticket_information">Ticket Information</string>
+    <string name="e_ticket_details">E-Ticket Details</string>
+    <string name="station_information">Station Information</string>
+    <string name="green_station">Green Station</string>
+    <string name="qr_code_content">QR Code Content</string>
+    <string name="raw_content">Raw content:</string>
+    <string name="amenities">Amenities</string>
+    <string name="kw_usage">kW Usage</string>
+    <string name="recovered">Recovered</string>
+    <string name="co2_saved_today">CO₂ Saved Today</string>
+    <string name="distance_traveled">Distance Traveled</string>
+    <string name="solar_coaches">Solar Coaches</string>
+    <string name="coaches">coaches</string>
+    <string name="excellent">Excellent</string>
+    <string name="good">Good</string>
+    <string name="average">Average</string>
+    <string name="energy_efficiency_score">Energy Efficiency Score</string>
+    
+    <!-- Train Status -->
+    <string name="train_status">Train Status</string>
+    <string name="live_train_tracking">Live train tracking</string>
+    <string name="train_number">Train Number</string>
+    <string name="train_name">Train Name</string>
+    <string name="status">Status</string>
+    <string name="location">Location</string>
+    <string name="next_station">Next Station</string>
+    <string name="expected_arrival">Expected Arrival</string>
+    <string name="delay">Delay</string>
+    <string name="minutes">minutes</string>
+    <string name="reason">Reason</string>
+    <string name="route_progress">Route Progress</string>
+    <string name="on_time">On Time</string>
+    <string name="delayed">Delayed</string>
+    <string name="stopped">Stopped</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="platform">Platform</string>
+    <string name="tbd">TBD</string>
+    <string name="pnr">PNR</string>
+    <string name="train">Train</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="date">Date</string>
+    <string name="coach_seat">Coach/Seat</string>
+    <string name="passenger">Passenger</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="station_code">Station Code</string>
+    <string name="station_name">Station Name</string>
+    <string name="platforms">Platforms</string>
+    <string name="solar_capacity">Solar Capacity</string>
+    <string name="track_your_train">Track your train in real-time</string>
+    <string name="enter_train_number">Enter train number...</string>
+    <string name="track">Track</string>
+    <string name="live_trains">Live Trains</string>
+    <string name="trains_with_delays">Trains with delays or stops</string>
+    <string name="delayed_by">Delayed by %d minutes</string>
+    
+    <!-- Energy Page -->
+    <string name="live_energy">Live Energy</string>
+    <string name="realtime_energy_monitoring">Real-time energy monitoring</string>
+    <string name="energy_metrics">Energy Metrics</string>
+    <string name="usage">Usage</string>
+    <string name="regen">Regen</string>
+    <string name="renewable">Renewable</string>
+    <string name="regenerative_braking">Regenerative Braking</string>
+    <string name="renewable_energy">Renewable Energy</string>
+    <string name="efficiency_score">Efficiency Score</string>
+    <string name="train_id">Train #%s</string>
+    <string name="energy_dashboard">%s Energy Dashboard</string>
+    <string name="trains_renewable">%1$d trains • %2$d%% renewable</string>
+    <string name="kwh_saved_today">kWh saved today</string>
+    
+    <!-- Support Page -->
+    <string name="support_green_initiatives">Support green initiatives</string>
+    <string name="carbon_balance">Carbon Balance</string>
+    <string name="offset_projects">Offset Projects</string>
+    <string name="contribute_carbon_neutral">Contribute to make your travel carbon neutral</string>
+    <string name="your_contributions">Your Contributions</string>
+    <string name="contribute">Contribute ₹10</string>
+    <string name="thank_you_contributed">Thank you! Contributed ₹10 to %s</string>
+    <string name="total_emissions">Total Emissions</string>
+    <string name="offset_contributions">Offset Contributions</string>
+    <string name="kg_co2_format">%s kg CO₂</string>
+    <string name="funded">funded</string>
+    <string name="your_carbon_balance">Your Carbon Balance</string>
+    <string name="remaining_to_offset">remaining to offset</string>
+    <string name="percent_offset">%d%% offset</string>
+    <string name="offset">Offset</string>
+    <string name="trees_equiv">Trees Equiv.</string>
+    <string name="raised">₹%d raised</string>
+    <string name="goal">₹%d goal</string>
+    <string name="percent_funded">%d%% funded</string>
+    <string name="contribute_now">Contribute Now</string>
+    
+    <!-- Education Hub -->
+    <string name="education_hub">Education Hub</string>
+    <string name="learn_sustainability">Learn about rail sustainability</string>
+    <string name="fact_of_the_day">Fact of the Day</string>
+    <string name="daily_quiz">Daily Quiz</string>
+    <string name="test_knowledge">Test your knowledge</string>
+    <string name="articles">Articles</string>
+    <string name="start_quiz">Start Quiz</string>
+    <string name="questions">questions</string>
+    <string name="read_more">Read More</string>
+    <string name="rail_sustainability_knowledge">Rail sustainability knowledge</string>
+    <string name="source">Source: %s</string>
+    <string name="daily_green_quiz">Daily Green Quiz</string>
+    <string name="questions_new_daily">%d questions • New questions daily</string>
+    <string name="start">Start</string>
+    <string name="learn_explore">Learn &amp; Explore</string>
+    <string name="article">Article</string>
+    <string name="infographic">Infographic</string>
+    <string name="video">Video</string>
+    <string name="quiz">Quiz</string>
+    <string name="min_read">%d min</string>
+    <string name="read">Read</string>
+    <string name="india_green_railway">India\'s Green Railway</string>
+    <string name="progress_sustainability">Progress towards sustainability</string>
+    <string name="electrification">Electrification</string>
+    <string name="routes_electrified">90%% of routes electrified</string>
+    <string name="solar_stations">Solar Stations</string>
+    <string name="solar_powered_stations">960+ solar-powered stations</string>
+    <string name="net_zero_goal">Net Zero Goal</string>
+    <string name="target_2030">Target: 2030</string>
+    <string name="question_of">Question %1$d/%2$d</string>
+    <string name="score">Score: %d</string>
+    <string name="quiz_complete">Quiz Complete!</string>
+    <string name="scored_out_of">You scored %1$d out of %2$d</string>
+    <string name="excellent_eco_expert">Excellent! You\'re an eco expert! 🌿</string>
+    <string name="good_job_learning">Good job! Keep learning! 📖</string>
+    <string name="nice_try_improve">Nice try! Room to improve! 💪</string>
+    <string name="keep_exploring">Keep exploring to learn more! 🔍</string>
+    <string name="check_answer">Check Answer</string>
+    <string name="next_question">Next Question</string>
+    <string name="see_results">See Results</string>
+    <string name="done">Done</string>
+    <string name="exit_quiz">Exit Quiz</string>
+    
+    <!-- Quiz Questions -->
+    <string name="quiz_q1">What percentage of Indian Railways is electrified?</string>
+    <string-array name="quiz_q1_options">
+        <item>50%</item>
+        <item>90%</item>
+        <item>70%</item>
+        <item>95%</item>
+    </string-array>
+    <string name="quiz_q1_explanation">As of 2024, over 90% of Indian Railways is electrified!</string>
+    
+    <string name="quiz_q2">How much CO2 does rail save vs road per km?</string>
+    <string-array name="quiz_q2_options">
+        <item>80%</item>
+        <item>50%</item>
+        <item>70%</item>
+        <item>90%</item>
+    </string-array>
+    <string name="quiz_q2_explanation">Rail transport produces about 80% less CO2 than road transport.</string>
+    
+    <string name="quiz_q3">What is regenerative braking?</string>
+    <string-array name="quiz_q3_options">
+        <item>Using solar panels</item>
+        <item>Using wind power</item>
+        <item>Manual braking</item>
+        <item>Converting kinetic energy to electricity</item>
+    </string-array>
+    <string name="quiz_q3_explanation">Regenerative braking converts the train\'s kinetic energy back into electricity when slowing down.</string>
+    
+    <string name="quiz_q4">How many stations in India are solar-powered?</string>
+    <string-array name="quiz_q4_options">
+        <item>100+</item>
+        <item>960+</item>
+        <item>500+</item>
+        <item>1500+</item>
+    </string-array>
+    <string name="quiz_q4_explanation">Over 960 railway stations in India now run on solar power!</string>
+    
+    <string name="quiz_q5">What is Indian Railways\' net-zero target year?</string>
+    <string-array name="quiz_q5_options">
+        <item>2030</item>
+        <item>2025</item>
+        <item>2040</item>
+        <item>2050</item>
+    </string-array>
+    <string name="quiz_q5_explanation">Indian Railways aims to become net-zero carbon emitter by 2030.</string>
+    
+    <!-- Smart Planner -->
+    <string name="smart_planner">Smart Planner</string>
+    <string name="plan_eco_friendly">Plan eco-friendly trips</string>
+    <string name="search_routes">Search Routes</string>
+    <string name="eco_routes">Eco Routes</string>
+    <string name="green_recommended">Green Recommended</string>
+    <string name="enter_origin">Enter origin station</string>
+    <string name="enter_destination">Enter destination station</string>
+    <string name="co2_footprint">CO₂ Footprint</string>
+    <string name="duration">Duration</string>
+    <string name="distance">Distance</string>
+    <string name="min">min</string>
+    <string name="km">km</string>
+    <string name="kg">kg</string>
+    <string name="renewable_stations">Renewable Stations</string>
+    <string name="congestion">Congestion</string>
+    <string name="low">Low</string>
+    <string name="high">High</string>
+    <string name="select_route">Select Route</string>
+    <string name="find_eco_routes">Find eco-friendly routes</string>
+    <string name="plan_your_journey">Plan Your Journey</string>
+    <string name="find_most_eco_route">Find the most eco-friendly route</string>
+    <string name="enter_departure">Enter departure station</string>
+    <string name="find_routes">Find Routes</string>
+    <string name="eco_smart_routing">Eco-Smart Routing</string>
+    <string name="routes_sorted_carbon">Routes sorted by lowest carbon footprint</string>
+    <string name="available_routes">Available Routes</string>
+    <string name="route_selected">Route selected: %1$s to %2$s</string>
+    <string name="standard_route">Standard Route</string>
+    <string name="traffic">Traffic</string>
+    <string name="select">Select</string>
+    <string name="finding_routes">Finding best routes...</string>
+    <string name="co2">CO₂</string>
+    
+    <!-- More Screen -->
+    <string name="more_features">More Features</string>
+    <string name="explore_eco_features">Explore all eco features</string>
+    <string name="explore_features">Explore Features</string>
+    <string name="discover_sustainable">Discover more ways to travel sustainably</string>
+    <string name="about">About</string>
+    <string name="sustainable_travel_platform">Sustainable Travel Platform</string>
+    <string name="about_description">Making every journey count towards a greener future. Track your carbon savings, discover eco-friendly routes, and join the sustainable travel movement.</string>
+    <string name="version">Version 1.0.0</string>
+    <string name="made_for_sustainable">Made for a sustainable future</string>
+    <string name="realtime_train_energy">Real-time train energy usage</string>
+    <string name="book_tickets">Book Tickets</string>
+    <string name="plan_eco_routes">Plan eco-friendly routes</string>
+    <string name="support_desc">Support green initiatives</string>
+    <string name="rail_sustainability_facts">Rail sustainability facts</string>
+    
+    <!-- Settings -->
+    <string name="general">General</string>
+    <string name="appearance">Appearance</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="use_dark_theme">Use dark theme</string>
+    <string name="notifications">Notifications</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="receive_updates">Receive trip and eco updates</string>
+    <string name="location_services">Location Services</string>
+    <string name="enable_nearby_stations">Enable for nearby stations</string>
+    <string name="auto_sync">Auto Sync</string>
+    <string name="sync_automatically">Sync data automatically</string>
+    <string name="data_storage">Data &amp; Storage</string>
+    <string name="clear_cache">Clear Cache</string>
+    <string name="free_storage">Free up storage space</string>
+    <string name="download_maps">Download Maps</string>
+    <string name="offline_access">Offline map access</string>
+    <string name="backup_data">Backup Data</string>
+    <string name="sync_to_cloud">Sync to cloud</string>
+    <string name="help_center">Help Center</string>
+    <string name="faqs_guides">FAQs and guides</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="help_improve">Help us improve</string>
+    <string name="report_bug">Report a Bug</string>
+    <string name="let_us_know">Let us know about issues</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="telugu">తెలుగు</string>
+    <string name="select_language">Select Language</string>
+    <string name="customize_experience">Customize your experience</string>
+    
+    <!-- Auth -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="sign_in_continue">Sign in to continue your eco journey</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="create_account">Create Account</string>
+    <string name="join_green_movement">Join the green movement</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="neural_rail">NeuralRail</string>
+    <string name="sustainable_travel_companion">Sustainable Travel Companion</string>
+    <string name="terms_privacy">By continuing, you agree to our Terms of Service\nand Privacy Policy</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    
+    <!-- User Drawer -->
+    <string name="achievements">Achievements</string>
+    <string name="my_trips">My Trips</string>
+    <string name="view_profile">View Profile</string>
+    <string name="eco_traveler">Eco Traveler</string>
+    <string name="my_profile">My Profile</string>
+    <string name="log_out">Log Out</string>
+    <string name="guest_user">Guest User</string>
+    
+    <!-- Language Selection -->
+    <string name="choose_language">Choose Language</string>
+    <string name="select_preferred_language">Select your preferred language</string>
+    <string name="continue_text">Continue</string>
+    
+    <!-- Delay Reasons -->
+    <string name="signal_failure">Signal failure ahead</string>
+    <string name="track_maintenance">Track maintenance</string>
+    <string name="weather_conditions">Weather conditions</string>
+    <string name="technical_issue">Technical issue</string>
+    <string name="passenger_emergency">Passenger emergency</string>
+    <string name="security_check">Security check</string>
+    <string name="track_congestion">Track congestion</string>
+    <string name="accident_ahead">Accident ahead</string>
+    <string name="power_failure">Power failure</string>
+    <string name="crew_change">Crew change</string>
+    <string name="unknown">Unknown</string>
+    
+    <!-- Additional strings -->
+    <string name="neural">Neural</string>
+    <string name="rail">Rail</string>
+    <string name="guest">Guest</string>
+    
+    <!-- About Screen -->
+    <string name="learn_about_neuralrail">Learn about NeuralRail</string>
+    <string name="our_mission">Our Mission</string>
+    <string name="mission_description">NeuralRail is dedicated to making sustainable travel accessible and rewarding. We believe that every journey can contribute to a greener future. By combining smart technology with gamification, we empower travelers to make eco-conscious choices while enjoying their commute.</string>
+    <string name="features">Features</string>
+    <string name="smart_travel">Smart Travel</string>
+    <string name="smart_travel_desc">AI-powered route planning for eco-friendly journeys</string>
+    <string name="carbon_tracking">Carbon Tracking</string>
+    <string name="carbon_tracking_desc">Monitor and offset your carbon footprint</string>
+    <string name="gamification">Gamification</string>
+    <string name="gamification_desc">Earn badges and compete in green challenges</string>
+    <string name="community_watch">Community Watch</string>
+    <string name="community_watch_feature_desc">Report energy waste and earn rewards</string>
+    <string name="legal">Legal</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="licenses">Licenses</string>
+    
+    <!-- User Profile Screen -->
+    <string name="manage_account">Manage your account</string>
+    <string name="user">User</string>
+    <string name="eco_warrior">Eco Warrior</string>
+    <string name="kg_co2_saved">kg CO₂ Saved</string>
+    <string name="total_trips">Total Trips</string>
+    <string name="day_streak_label">Day Streak</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="update_personal_info">Update your personal info</string>
+    <string name="manage_notifications">Manage notification preferences</string>
+    <string name="privacy_security">Privacy &amp; Security</string>
+    <string name="password_security">Password and security settings</string>
+    
+    <!-- Auth Screen -->
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="or_continue_with">or continue with</string>
+    <string name="google">Google</string>
+    <string name="phone">Phone</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="valid_email_error">Please enter a valid email</string>
+    <string name="password_min_error">Password must be at least 6 characters</string>
+    <string name="name_required_error">Please enter your name</string>
+    <string name="phone_error">Please enter a valid phone number</string>
+    <string name="passwords_not_match">Passwords do not match</string>
+    <string name="at_least_6_chars">At least 6 characters</string>
+    <string name="contains_uppercase">Contains uppercase letter</string>
+    <string name="contains_number">Contains a number</string>
+    <string name="join_sustainable_movement">Join the sustainable travel movement</string>
+    
+    <!-- QR Scanner additional -->
+    <string name="unknown_qr_content">Unknown QR Content</string>
+    <string name="unrecognized_format">Unrecognized format</string>
+    <string name="scan_error">Scan Error</string>
+    <string name="try_again">Try Again</string>
+    
+    <!-- Article Detail Screen -->
+    <string name="min_read_format">%d min read</string>
+    <string name="key_takeaways">Key Takeaways</string>
+    <string name="takeaway_1">Sustainable rail travel reduces carbon emissions significantly</string>
+    <string name="takeaway_2">Modern trains use regenerative braking to recover energy</string>
+    <string name="takeaway_3">Solar-powered stations are becoming the new standard</string>
+    <string name="saved">Saved</string>
+    <string name="save_action">Save</string>
+    <string name="related_topics">Related Topics</string>
+    <string name="energy_efficiency">Energy Efficiency</string>
+    <string name="green_travel">Green Travel</string>
+    <string name="solar_power">Solar Power</string>
+    <string name="like">Like</string>
+    <string name="bookmark">Bookmark</string>
+    
+    <!-- Achievements Screen -->
+    <string name="unlocked">Unlocked</string>
+    <string name="achievements_earned">%d achievements earned</string>
+    <string name="in_progress_title">In Progress</string>
+    <string name="achievements_remaining">%d achievements remaining</string>
+    <string name="your_progress">Your Progress</string>
+    <string name="completion_rate">completion rate</string>
+    <string name="of_total">of %d</string>
+    <string name="unlocked_of_total">%1$d of %2$d unlocked</string>
+    
+    <!-- Challenge Titles and Descriptions -->
+    <string name="challenge_rail_rider">Rail Rider</string>
+    <string name="challenge_rail_rider_desc">Take the train instead of cab today</string>
+    <string name="challenge_walk_mile">Walk the Mile</string>
+    <string name="challenge_walk_mile_desc">Walk 1 km instead of using auto</string>
+    <string name="challenge_off_peak">Off-Peak Hero</string>
+    <string name="challenge_off_peak_desc">Travel during off-peak hours (10AM-4PM)</string>
+    <string name="challenge_share_care">Share &amp; Care</string>
+    <string name="challenge_share_care_desc">Share your eco stats with 3 friends</string>
+    <string name="challenge_weekly_commuter">Weekly Commuter</string>
+    <string name="challenge_weekly_commuter_desc">Take 5 train trips this week</string>
+    <string name="challenge_marathon_walker">Marathon Walker</string>
+    <string name="challenge_marathon_walker_desc">Walk 10 km total this week</string>
+    <string name="challenge_green_reporter">Green Reporter</string>
+    <string name="challenge_green_reporter_desc">Report 2 energy waste issues</string>
+    <string name="challenge_community_hero">Community Hero</string>
+    <string name="challenge_community_hero_desc">Help the community save 1000kg CO2</string>
+    <string name="time_7_days">7 days</string>
+    <string name="time_48_hours">48 hours</string>
+    <string name="time_3_days">3 days</string>
+    <string name="time_expired">Expired</string>
+</resources>

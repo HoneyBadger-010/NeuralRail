@@ -1,0 +1,12 @@
+{
+  "name": "neuralrail-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx serve -l 3000",
+    "dev": "npx serve -l 3000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.5"
+  }
+}

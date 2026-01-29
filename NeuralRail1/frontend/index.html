@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuralRail - Delhi Section Controller</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">
+          <span class="logo-icon">🚄</span>
+          <div class="logo-text">
+            <span class="logo-title">NEURALRAIL</span>
+            <span class="logo-subtitle">Delhi Section Controller</span>
+          </div>
+        </div>
+      </div>
+      <div class="header-center">
+        <div class="corridor-info">
+          <span class="corridor-label">SECTION</span>
+          <span class="corridor-name">DELHI HUB (4 Routes)</span>
+        </div>
+        <!-- Scenario Selector -->
+        <div class="scenario-nav">
+          <select class="scenario-select-nav" id="scenarioSelect">
+            <option value="">Select Scenario</option>
+          </select>
+          <button class="run-btn-nav" id="runScenarioBtn" disabled>
+            <span class="run-icon">▶</span>
+          </button>
+        </div>
+        <div class="status-indicator" id="connectionStatus">
+          <span class="status-dot"></span>
+          <span class="status-text">CONNECTING...</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <!-- Playback Controls -->
+        <div class="playback-nav">
+          <button class="playback-btn-nav" id="pauseBtn" title="Pause/Resume">
+            <span id="pauseIcon">⏸️</span>
+          </button>
+          <div class="speed-btns-nav">
+            <button class="speed-btn-nav" data-speed="0.5">0.5x</button>
+            <button class="speed-btn-nav active" data-speed="1">1x</button>
+            <button class="speed-btn-nav" data-speed="2">2x</button>
+            <button class="speed-btn-nav" data-speed="5">5x</button>
+          </div>
+        </div>
+        <!-- Train Dropdown Button -->
+        <button class="trains-dropdown-btn" id="trainsDropdownBtn">
+          🚂 TRAINS <span class="train-count" id="trainCount">0</span>
+          <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="clock" id="clock">
+          <span class="clock-time">--:--:--</span>
+          <span class="clock-date">-- --- ----</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Train Dropdown Panel (Hidden by default) -->
+    <div class="trains-dropdown-panel" id="trainsDropdownPanel">
+      <div class="trains-dropdown-header">
+        <h3>🚂 ACTIVE TRAINS</h3>
+        <button class="close-dropdown" id="closeTrainsDropdown">✕</button>
+      </div>
+      <div class="train-list" id="trainList">
+        <div class="empty-state">Select scenario to see trains</div>
+      </div>
+    </div>
+
+    <!-- Main Content - New Layout -->
+    <main class="main-content-new">
+      <!-- LEFT COLUMN: Track Map + Log -->
+      <div class="left-column">
+        <!-- Track Schematic -->
+        <section class="map-panel">
+          <div class="map-header">
+            <div class="map-title">
+              <h2>🛤️ DELHI JUNCTION - TRACK SCHEMATIC</h2>
+            </div>
+            <!-- Section Focus Dropdown -->
+            <div class="section-focus-control">
+              <label for="sectionSelect">Focus:</label>
+              <select id="sectionSelect" class="section-select">
+                <option value="all">All Routes (Overview)</option>
+                <option value="north">North Line (NDLS → Sonipat)</option>
+                <option value="south">South Line (NDLS → Mathura)</option>
+                <option value="east">East Line (NDLS → Ghaziabad)</option>
+                <option value="west">West Line (NDLS → Delhi Cantt)</option>
+              </select>
+            </div>
+          </div>
+          <div class="map-container" id="trackContainer">
+            <!-- Delhi Junction SVG will be loaded here -->
+          </div>
+        </section>
+
+        <!-- Train Details Popup (Click-based, centered modal) -->
+        <div class="train-details-backdrop" id="trainDetailsBackdrop"></div>
+        <div class="train-details-panel" id="trainDetailsPanel">
+          <div class="train-details-header">
+            <span class="train-details-title" id="trainDetailTitle">🚂 Select a Train</span>
+            <button class="close-train-details" id="closeTrainDetails">✕</button>
+          </div>
+          <div class="train-details-body" id="trainDetailsBody">
+            <div class="train-details-empty">Click on a train to view details</div>
+          </div>
+        </div>
+
+        <!-- Log Panel (Below Track Schematic) -->
+        <div class="log-panel log-panel-bottom">
+          <div class="panel-header">
+            <h2>📋 LIVE FEED</h2>
+            <button class="clear-btn" id="clearLog">Clear</button>
+          </div>
+          <div class="log-content" id="logContent">
+            <div class="log-entry info">
+              <span class="log-time">--:--:--</span>
+              <span class="log-msg">System ready</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Energy Panels Row (Below Log Panel) -->
+        <div class="energy-panels-row">
+          <!-- Energy Impact Panel -->
+          <div class="energy-panel energy-panel-left">
+            <div class="panel-header energy-header">
+              <h2>⚡ ENERGY IMPACT</h2>
+              <span class="energy-badge" id="energyBadgeLive">Live</span>
+            </div>
+            <div class="energy-content" id="energyContentLeft">
+              <div class="energy-main-stats">
+                <div class="energy-big-stat">
+                  <span class="energy-big-value saved" id="sessionEnergySavedLeft">0</span>
+                  <span class="energy-big-unit">kWh Saved</span>
+                  <span class="energy-big-label">This Session</span>
+                </div>
+                <div class="energy-secondary-stats">
+                  <div class="energy-stat-item">
+                    <span class="stat-icon">🌱</span>
+                    <span class="stat-value" id="sessionCO2SavedLeft">0 kg</span>
+                    <span class="stat-label">CO₂ Reduced</span>
+                  </div>
+                  <div class="energy-stat-item">
+                    <span class="stat-icon">💰</span>
+                    <span class="stat-value" id="sessionCostSaved">₹0</span>
+                    <span class="stat-label">Cost Saved</span>
+                  </div>
+                </div>
+              </div>
+              <div class="energy-comparison-card">
+                <div class="comparison-header">AI Model Efficiency</div>
+                <div class="comparison-bars">
+                  <div class="comparison-bar-item">
+                    <span class="bar-label">Without AI</span>
+                    <div class="bar-container">
+                      <div class="bar-fill bad" id="barWithoutAI" style="width: 100%"></div>
+                    </div>
+                    <span class="bar-value" id="energyWithoutAILeft">0 kWh</span>
+                  </div>
+                  <div class="comparison-bar-item">
+                    <span class="bar-label">With AI</span>
+                    <div class="bar-container">
+                      <div class="bar-fill good" id="barWithAI" style="width: 0%"></div>
+                    </div>
+                    <span class="bar-value" id="energyWithAILeft">0 kWh</span>
+                  </div>
+                </div>
+                <div class="savings-percentage">
+                  <span class="percentage-value" id="savingsPercentage">0%</span>
+                  <span class="percentage-label">Energy Savings</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Division Energy Dashboard -->
+          <div class="division-panel division-panel-left">
+            <div class="panel-header division-header">
+              <h2>🏢 NORTHERN DIVISION</h2>
+              <span class="division-badge">Section Controllers</span>
+            </div>
+            <div class="division-content" id="divisionContentLeft">
+              <div class="division-total-card">
+                <span class="division-total-label">Division Total Energy Saved</span>
+                <span class="division-total-value" id="divisionTotalSavedLeft">2,450 kWh</span>
+                <span class="division-co2" id="divisionCO2Saved">≈ 2,009 kg CO₂ reduced</span>
+              </div>
+              <div class="section-controllers-list">
+                <div class="section-controller-item active" data-section="delhi">
+                  <div class="section-info">
+                    <span class="section-badge active">ACTIVE</span>
+                    <span class="section-name">Delhi Section</span>
+                  </div>
+                  <div class="section-stats">
+                    <span class="section-saved" id="delhiSectionSavedLeft">850 kWh</span>
+                    <div class="section-progress">
+                      <div class="progress-bar" style="width: 35%"></div>
+                    </div>
+                    <span class="section-percent">35%</span>
+                  </div>
+                </div>
+                <div class="section-controller-item" data-section="lucknow">
+                  <div class="section-info">
+                    <span class="section-name">Lucknow Section</span>
+                  </div>
+                  <div class="section-stats">
+                    <span class="section-saved">620 kWh</span>
+                    <div class="section-progress">
+                      <div class="progress-bar" style="width: 25%"></div>
+                    </div>
+                    <span class="section-percent">25%</span>
+                  </div>
+                </div>
+                <div class="section-controller-item" data-section="ambala">
+                  <div class="section-info">
+                    <span class="section-name">Ambala Section</span>
+                  </div>
+                  <div class="section-stats">
+                    <span class="section-saved">480 kWh</span>
+                    <div class="section-progress">
+                      <div class="progress-bar" style="width: 20%"></div>
+                    </div>
+                    <span class="section-percent">20%</span>
+                  </div>
+                </div>
+                <div class="section-controller-item" data-section="moradabad">
+                  <div class="section-info">
+                    <span class="section-name">Moradabad Section</span>
+                  </div>
+                  <div class="section-stats">
+                    <span class="section-saved">320 kWh</span>
+                    <div class="section-progress">
+                      <div class="progress-bar" style="width: 13%"></div>
+                    </div>
+                    <span class="section-percent">13%</span>
+                  </div>
+                </div>
+                <div class="section-controller-item" data-section="firozpur">
+                  <div class="section-info">
+                    <span class="section-name">Firozpur Section</span>
+                  </div>
+                  <div class="section-stats">
+                    <span class="section-saved">180 kWh</span>
+                    <div class="section-progress">
+                      <div class="progress-bar" style="width: 7%"></div>
+                    </div>
+                    <span class="section-percent">7%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: AI Panel Only -->
+      <aside class="right-column">
+        <!-- AI Recommendations -->
+        <div class="ai-panel">
+          <div class="panel-header">
+            <h2>🤖 AI RECOMMENDATIONS</h2>
+            <span class="info-badge" id="aiStatusBadge">Monitoring</span>
+          </div>
+          <div class="ai-content" id="aiContent">
+            <div class="ai-idle-state">
+              <div class="ai-icon">🧠</div>
+              <div class="ai-message">AI is monitoring train movements</div>
+              <div class="ai-submessage">Recommendations appear when conflicts detected</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Conflict Alert Modal -->
+    <div class="modal-overlay" id="conflictModal">
+      <div class="modal-content">
+        <div class="modal-header danger">
+          <span class="modal-icon">⚠️</span>
+          <h2>CONFLICT DETECTED</h2>
+        </div>
+        <div class="modal-body">
+          <div class="conflict-details">
+            <div class="conflict-row">
+              <span class="conflict-label">Location</span>
+              <span class="conflict-value" id="conflictLocation">--</span>
+            </div>
+            <div class="conflict-row">
+              <span class="conflict-label">Time to Conflict</span>
+              <span class="conflict-value danger" id="conflictTime">--</span>
+            </div>
+            <div class="conflict-row">
+              <span class="conflict-label">Trains Involved</span>
+              <span class="conflict-value" id="conflictTrains">--</span>
+            </div>
+            <div class="conflict-row">
+              <span class="conflict-label">Type</span>
+              <span class="conflict-value" id="conflictType">--</span>
+            </div>
+          </div>
+          <div class="solutions-section">
+            <h3>AI RECOMMENDATIONS</h3>
+            <div class="solutions-list" id="solutionsList"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" id="rejectAll">Reject All</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Simulation Modal -->
+    <div class="modal-overlay" id="simulationModal">
+      <div class="modal-content simulation-modal">
+        <div class="modal-header info">
+          <span class="modal-icon">📊</span>
+          <h2>SOLUTION PREVIEW</h2>
+        </div>
+        <div class="modal-body">
+          <div class="simulation-graph-container">
+            <canvas id="simulationCanvas" width="560" height="280"></canvas>
+          </div>
+          <div class="simulation-controls">
+            <span class="sim-control-label">Speed:</span>
+            <button class="sim-speed-btn" data-speed="0.5">0.5x</button>
+            <button class="sim-speed-btn active" data-speed="1">1x</button>
+            <button class="sim-speed-btn" data-speed="2">2x</button>
+            <button class="btn btn-secondary btn-sm" id="restartSimulation">↻ Restart</button>
+          </div>
+          <div class="simulation-info">
+            <div class="sim-stat">
+              <span class="sim-label">Solution</span>
+              <span class="sim-value" id="simAction">--</span>
+            </div>
+            <div class="sim-stat">
+              <span class="sim-label">Energy Cost</span>
+              <span class="sim-value" id="simEnergy">-- kWh</span>
+            </div>
+            <div class="sim-stat">
+              <span class="sim-label">Delay</span>
+              <span class="sim-value" id="simDelay">-- min</span>
+            </div>
+          </div>
+          <div class="simulation-status" id="simStatus"></div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" id="cancelSimulation">← Back</button>
+          <button class="btn btn-primary" id="approveSimulation">✓ Approve</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Train Hover Tooltip -->
+    <div class="train-tooltip" id="trainTooltip">
+      <div class="tooltip-header">
+        <span class="tooltip-train-id" id="tooltipTrainId">--</span>
+        <span class="tooltip-train-type" id="tooltipTrainType">--</span>
+      </div>
+      <div class="tooltip-body">
+        <div class="tooltip-row">
+          <span class="tooltip-label">🚂 Name:</span>
+          <span class="tooltip-value" id="tooltipTrainName">--</span>
+        </div>
+        <div class="tooltip-row">
+          <span class="tooltip-label">📍 Position:</span>
+          <span class="tooltip-value" id="tooltipPosition">-- km</span>
+        </div>
+        <div class="tooltip-row">
+          <span class="tooltip-label">⚡ Speed:</span>
+          <span class="tooltip-value" id="tooltipSpeed">-- km/h</span>
+        </div>
+        <div class="tooltip-row">
+          <span class="tooltip-label">🧭 Direction:</span>
+          <span class="tooltip-value" id="tooltipDirection">--</span>
+        </div>
+        <div class="tooltip-row">
+          <span class="tooltip-label">🎯 Destination:</span>
+          <span class="tooltip-value" id="tooltipDestination">--</span>
+        </div>
+        <div class="tooltip-row">
+          <span class="tooltip-label">🛤️ Route:</span>
+          <span class="tooltip-value" id="tooltipRoute">--</span>
+        </div>
+        <div class="tooltip-row">
+          <span class="tooltip-label">⭐ Priority:</span>
+          <span class="tooltip-value" id="tooltipPriority">--</span>
+        </div>
+        <div class="tooltip-row">
+          <span class="tooltip-label">⚖️ Mass:</span>
+          <span class="tooltip-value" id="tooltipMass">-- tons</span>
+        </div>
+        <div class="tooltip-row">
+          <span class="tooltip-label">🔋 Power:</span>
+          <span class="tooltip-value" id="tooltipEnergy">-- kW</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

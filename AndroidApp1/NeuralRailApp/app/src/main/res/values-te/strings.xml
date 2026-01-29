@@ -1,0 +1,559 @@
+<resources>
+    <string name="app_name">న్యూరల్‌రైల్</string>
+    
+    <!-- Common -->
+    <string name="loading">లోడ్ అవుతోంది...</string>
+    <string name="error">లోపం</string>
+    <string name="retry">మళ్ళీ ప్రయత్నించు</string>
+    <string name="cancel">రద్దు</string>
+    <string name="save">సేవ్</string>
+    <string name="close">మూసివేయి</string>
+    <string name="back">వెనుకకు</string>
+    <string name="search">వెతుకు</string>
+    <string name="settings">సెట్టింగ్‌లు</string>
+    <string name="profile">ప్రొఫైల్</string>
+    <string name="logout">లాగ్అవుట్</string>
+    <string name="login">లాగిన్</string>
+    <string name="signup">సైన్ అప్</string>
+    <string name="days">రోజులు</string>
+    <string name="live">లైవ్</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">హోమ్</string>
+    <string name="nav_trains">రైళ్లు</string>
+    <string name="nav_scan">స్కాన్</string>
+    <string name="nav_challenges">ఛాలెంజ్‌లు</string>
+    <string name="nav_more">మరిన్ని</string>
+    
+    <!-- Home Screen -->
+    <string name="eco_smart_travel">ఎకో-స్మార్ట్ ట్రావెల్</string>
+    <string name="your_environmental_impact">మీ పర్యావరణ ప్రభావం</string>
+    <string name="kg_co2">కేజీ CO₂</string>
+    <string name="saved_this_month">ఈ నెల ఆదా</string>
+    <string name="trips">ప్రయాణాలు</string>
+    <string name="trees">చెట్లు</string>
+    <string name="badges">బ్యాడ్జ్‌లు</string>
+    <string name="quick_services">త్వరిత సేవలు</string>
+    <string name="book_ticket">టిక్కెట్ బుక్</string>
+    <string name="energy">శక్తి</string>
+    <string name="support">సపోర్ట్</string>
+    <string name="learn">నేర్చుకో</string>
+    <string name="search_trains_stations">రైళ్లు, స్టేషన్లు వెతకండి...</string>
+    <string name="search_results">శోధన ఫలితాలు</string>
+    <string name="clear">క్లియర్</string>
+    <string name="no_results_found">ఫలితాలు లేవు</string>
+    <string name="try_different_search">వేరే పదంతో ప్రయత్నించండి</string>
+    <string name="train_status_desc">లైవ్ రైలు ట్రాకింగ్</string>
+    <string name="smart_planner_desc">ఎకో-ఫ్రెండ్లీ ట్రిప్‌లు ప్లాన్</string>
+    <string name="live_energy_desc">రియల్-టైమ్ శక్తి పర్యవేక్షణ</string>
+    <string name="carbon_offset_desc">మీ ఫుట్‌ప్రింట్ న్యూట్రలైజ్</string>
+    <string name="education_hub_desc">సుస్థిరత నేర్చుకోండి</string>
+    <string name="community_watch_desc">శక్తి వృధా నివేదించండి</string>
+    <string name="challenges_desc">పోటీ పడండి &amp; రివార్డ్స్ గెలవండి</string>
+    <string name="qr_scanner_desc">టిక్కెట్లు &amp; సమాచారం స్కాన్</string>
+    
+    <!-- Report Problem / Community Watch -->
+    <string name="report_problem">సమస్య నివేదించు</string>
+    <string name="report_and_track">సమస్యలను నివేదించి ట్రాక్ చేయండి</string>
+    <string name="community_impact">సమాజ ప్రభావం</string>
+    <string name="together_making_difference">కలిసి మనం మార్పు తీసుకొస్తున్నాం!</string>
+    <string name="reports">నివేదికలు</string>
+    <string name="resolved">పరిష్కరించబడింది</string>
+    <string name="quick_report">త్వరిత నివేదిక</string>
+    <string name="tap_to_report">సమస్యలను నివేదించడానికి నొక్కండి</string>
+    <string name="lights">లైట్లు</string>
+    <string name="ac">ఏసీ</string>
+    <string name="solar">సోలార్</string>
+    <string name="engine">ఇంజన్</string>
+    <string name="recent_reports">ఇటీవలి నివేదికలు</string>
+    <string name="all">అన్నీ</string>
+    <string name="pending">పెండింగ్</string>
+    <string name="investigating">పరిశోధిస్తోంది</string>
+    <string name="report_issue">సమస్య నివేదించు</string>
+    <string name="report_energy_waste">శక్తి వృధా నివేదించు</string>
+    <string name="help_save_resources">వనరులు ఆదా చేయడంలో సహాయం</string>
+    <string name="issue_type">సమస్య రకం</string>
+    <string name="location_hint">స్థానం</string>
+    <string name="description_optional">వివరణ (ఐచ్ఛికం)</string>
+    <string name="submit">సమర్పించు</string>
+    <string name="upvoted_report">నివేదికకు అప్‌వోట్</string>
+    <string name="report_submitted">నివేదిక విజయవంతంగా సమర్పించబడింది</string>
+    <string name="no_reports_found">నివేదికలు కనుగొనబడలేదు</string>
+    <string name="be_first_report">మొదటిగా సమస్య నివేదించండి!</string>
+    <string name="kwh">kWh</string>
+    
+    <!-- Green Challenges -->
+    <string name="green_challenges">గ్రీన్ ఛాలెంజ్‌లు</string>
+    <string name="earn_points_leaderboard">పాయింట్లు సంపాదించి లీడర్‌బోర్డ్‌లో ఎక్కండి</string>
+    <string name="points">పాయింట్లు</string>
+    <string name="streak">స్ట్రీక్</string>
+    <string name="rank">ర్యాంక్</string>
+    <string name="streak_progress">స్ట్రీక్ ప్రోగ్రెస్</string>
+    <string name="best_days">బెస్ట్: %d రోజులు</string>
+    <string name="daily">రోజువారీ</string>
+    <string name="weekly">వారపు</string>
+    <string name="longest">పొడవైన</string>   
+ <string name="active_challenges">🔥 యాక్టివ్ ఛాలెంజ్‌లు</string>
+    <string name="available_missions">అందుబాటులో ఉన్న మిషన్లు</string>
+    <string name="complete_challenges_earn">పాయింట్లు సంపాదించడానికి ఛాలెంజ్‌లు పూర్తి చేయండి</string>
+    <string name="accept_challenge">ఛాలెంజ్ అంగీకరించు</string>
+    <string name="abandon">విడిచిపెట్టు</string>
+    <string name="share">షేర్</string>
+    <string name="add_progress">ప్రోగ్రెస్ జోడించు (+1)</string>
+    <string name="progress">ప్రోగ్రెస్</string>
+    <string name="completed">పూర్తయింది!</string>
+    <string name="in_progress">ప్రోగ్రెస్‌లో</string>
+    <string name="challenge_accepted">ఛాలెంజ్ అంగీకరించబడింది!</string>
+    <string name="good_luck_complete">శుభం! పాయింట్లు సంపాదించడానికి ఛాలెంజ్ పూర్తి చేయండి.</string>
+    <string name="lets_go">ప్రారంభించు!</string>
+    <string name="abandon_challenge">ఛాలెంజ్ విడిచిపెట్టాలా?</string>
+    <string name="progress_will_be_lost">మీ ప్రోగ్రెస్ కోల్పోతారు మరియు ఈ ఛాలెంజ్‌కు పాయింట్లు రావు.</string>
+    <string name="keep_going">కొనసాగించు</string>
+    <string name="share_progress">ప్రోగ్రెస్ షేర్ చేయి</string>
+    <string name="share_now">ఇప్పుడు షేర్ చేయి</string>
+    <string name="weekly_leaderboard">వారపు లీడర్‌బోర్డ్</string>
+    <string name="category">కేటగిరీ</string>
+    <string name="type">రకం</string>
+    <string name="challenge_details">ఛాలెంజ్ వివరాలు</string>
+    <string name="expires">గడువు</string>
+    <string name="target">లక్ష్యం</string>
+    <string name="difficulty">కష్టం</string>
+    <string name="easy">సులభం</string>
+    <string name="medium">మధ్యస్థం</string>
+    <string name="hard">కష్టం</string>
+    <string name="day_streak">రోజు స్ట్రీక్</string>
+    <string name="pts">పాయింట్లు</string>
+    <string name="special">ప్రత్యేక</string>
+    <string name="community">సమాజం</string>
+    <string name="travel">ప్రయాణం</string>
+    <string name="walk">నడక</string>
+    <string name="off_peak">ఆఫ్ పీక్</string>
+    
+    <!-- QR Scanner -->
+    <string name="qr_scanner">QR స్కానర్</string>
+    <string name="scan_tickets_info">టిక్కెట్లు &amp; రైలు సమాచారం స్కాన్</string>
+    <string name="point_camera_qr">QR కోడ్ వైపు కెమెరా చూపించండి</string>
+    <string name="turn_on_flashlight">ఫ్లాష్‌లైట్ ఆన్ చేయి</string>
+    <string name="turn_off_flashlight">ఫ్లాష్‌లైట్ ఆఫ్ చేయి</string>
+    <string name="scan_another_qr">మరో QR కోడ్ స్కాన్ చేయి</string>
+    <string name="train_information">రైలు సమాచారం</string>
+    <string name="scanned_from_qr">QR నుండి స్కాన్ చేయబడింది</string>
+    <string name="energy_sustainability">శక్తి &amp; సుస్థిరత</string>
+    <string name="electric_train">ఎలక్ట్రిక్ రైలు</string>
+    <string name="camera_permission_required">కెమెరా అనుమతి అవసరం</string>
+    <string name="grant_camera_permission">QR కోడ్‌లు స్కాన్ చేయడానికి కెమెరా అనుమతి ఇవ్వండి</string>
+    <string name="grant_permission">అనుమతి ఇవ్వు</string>
+    <string name="ticket_information">టిక్కెట్ సమాచారం</string>
+    <string name="e_ticket_details">ఇ-టిక్కెట్ వివరాలు</string>
+    <string name="station_information">స్టేషన్ సమాచారం</string>
+    <string name="green_station">గ్రీన్ స్టేషన్</string>
+    <string name="qr_code_content">QR కోడ్ కంటెంట్</string>
+    <string name="raw_content">రా కంటెంట్:</string>
+    <string name="amenities">సౌకర్యాలు</string>
+    <string name="kw_usage">kW వాడకం</string>
+    <string name="recovered">రికవర్ చేయబడింది</string>
+    <string name="co2_saved_today">ఈ రోజు ఆదా చేసిన CO₂</string>
+    <string name="distance_traveled">ప్రయాణించిన దూరం</string>
+    <string name="solar_coaches">సోలార్ కోచ్‌లు</string>
+    <string name="coaches">కోచ్‌లు</string>
+    <string name="excellent">అద్భుతం</string>
+    <string name="good">మంచిది</string>
+    <string name="average">సగటు</string>
+    <string name="energy_efficiency_score">శక్తి సామర్థ్య స్కోర్</string>
+    
+    <!-- Train Status -->
+    <string name="train_status">రైలు స్థితి</string>
+    <string name="live_train_tracking">లైవ్ రైలు ట్రాకింగ్</string>
+    <string name="train_number">రైలు నంబర్</string>
+    <string name="train_name">రైలు పేరు</string>
+    <string name="status">స్థితి</string>
+    <string name="location">స్థానం</string>
+    <string name="next_station">తదుపరి స్టేషన్</string>
+    <string name="expected_arrival">అంచనా రాక</string>
+    <string name="delay">ఆలస్యం</string>
+    <string name="minutes">నిమిషాలు</string>
+    <string name="reason">కారణం</string>
+    <string name="route_progress">మార్గ ప్రోగ్రెస్</string>
+    <string name="on_time">సమయానికి</string>
+    <string name="delayed">ఆలస్యం</string>
+    <string name="stopped">ఆగిపోయింది</string>
+    <string name="cancelled">రద్దు చేయబడింది</string>
+    <string name="platform">ప్లాట్‌ఫారం</string>
+    <string name="tbd">తర్వాత తెలియజేయబడుతుంది</string>
+    <string name="pnr">PNR</string>
+    <string name="train">రైలు</string>
+    <string name="from">నుండి</string>
+    <string name="to">వరకు</string>
+    <string name="date">తేదీ</string>
+    <string name="coach_seat">కోచ్/సీట్</string>
+    <string name="passenger">ప్రయాణికుడు</string>
+    <string name="confirmed">నిర్ధారించబడింది</string>
+    <string name="station_code">స్టేషన్ కోడ్</string>
+    <string name="station_name">స్టేషన్ పేరు</string>
+    <string name="platforms">ప్లాట్‌ఫారాలు</string>
+    <string name="solar_capacity">సోలార్ సామర్థ్యం</string>
+    <string name="track_your_train">మీ రైలును ట్రాక్ చేయండి</string>
+    <string name="enter_train_number">రైలు నంబర్ నమోదు చేయండి...</string>
+    <string name="track">ట్రాక్</string>
+    <string name="live_trains">లైవ్ రైళ్లు</string>
+    <string name="trains_with_delays">ఆలస్యం లేదా ఆగిపోయిన రైళ్లు</string>
+    <string name="delayed_by">%d నిమిషాలు ఆలస్యం</string>    
+  
+  <!-- Energy Page -->
+    <string name="live_energy">లైవ్ శక్తి</string>
+    <string name="realtime_energy_monitoring">రియల్-టైమ్ శక్తి పర్యవేక్షణ</string>
+    <string name="energy_metrics">శక్తి మెట్రిక్స్</string>
+    <string name="usage">వాడకం</string>
+    <string name="regen">రీజెన్</string>
+    <string name="renewable">పునరుత్పాదక</string>
+    <string name="regenerative_braking">రీజెనరేటివ్ బ్రేకింగ్</string>
+    <string name="renewable_energy">పునరుత్పాదక శక్తి</string>
+    <string name="efficiency_score">సామర్థ్య స్కోర్</string>
+    <string name="train_id">రైలు #%s</string>
+    <string name="energy_dashboard">%s శక్తి డాష్‌బోర్డ్</string>
+    <string name="trains_renewable">%1$d రైళ్లు • %2$d%% పునరుత్పాదక</string>
+    <string name="kwh_saved_today">kWh ఈ రోజు ఆదా</string>
+    
+    <!-- Support Page -->
+    <string name="support_green_initiatives">గ్రీన్ ఇనిషియేటివ్‌లకు సపోర్ట్</string>
+    <string name="carbon_balance">కార్బన్ బ్యాలెన్స్</string>
+    <string name="offset_projects">ఆఫ్‌సెట్ ప్రాజెక్ట్‌లు</string>
+    <string name="contribute_carbon_neutral">మీ ప్రయాణాన్ని కార్బన్ న్యూట్రల్ చేయడానికి సహకరించండి</string>
+    <string name="your_contributions">మీ సహకారాలు</string>
+    <string name="contribute">₹10 సహకరించు</string>
+    <string name="thank_you_contributed">ధన్యవాదాలు! %s కు ₹10 సహకరించారు</string>
+    <string name="total_emissions">మొత్తం ఉద్గారాలు</string>
+    <string name="offset_contributions">ఆఫ్‌సెట్ సహకారాలు</string>
+    <string name="kg_co2_format">%s కేజీ CO₂</string>
+    <string name="funded">ఫండ్ చేయబడింది</string>
+    <string name="your_carbon_balance">మీ కార్బన్ బ్యాలెన్స్</string>
+    <string name="remaining_to_offset">ఆఫ్‌సెట్ చేయడానికి మిగిలి ఉంది</string>
+    <string name="percent_offset">%d%% ఆఫ్‌సెట్</string>
+    <string name="offset">ఆఫ్‌సెట్</string>
+    <string name="trees_equiv">చెట్ల సమానం</string>
+    <string name="raised">₹%d సేకరించబడింది</string>
+    <string name="goal">₹%d లక్ష్యం</string>
+    <string name="percent_funded">%d%% ఫండ్ చేయబడింది</string>
+    <string name="contribute_now">ఇప్పుడు సహకరించండి</string>
+    
+    <!-- Education Hub -->
+    <string name="education_hub">ఎడ్యుకేషన్ హబ్</string>
+    <string name="learn_sustainability">రైల్ సుస్థిరత గురించి నేర్చుకోండి</string>
+    <string name="fact_of_the_day">ఈ రోజు వాస్తవం</string>
+    <string name="daily_quiz">రోజువారీ క్విజ్</string>
+    <string name="test_knowledge">మీ జ్ఞానాన్ని పరీక్షించండి</string>
+    <string name="articles">ఆర్టికల్స్</string>
+    <string name="start_quiz">క్విజ్ ప్రారంభించు</string>
+    <string name="questions">ప్రశ్నలు</string>
+    <string name="read_more">మరింత చదవండి</string>
+    <string name="rail_sustainability_knowledge">రైల్ సుస్థిరత జ్ఞానం</string>
+    <string name="source">మూలం: %s</string>
+    <string name="daily_green_quiz">రోజువారీ గ్రీన్ క్విజ్</string>
+    <string name="questions_new_daily">%d ప్రశ్నలు • రోజూ కొత్త ప్రశ్నలు</string>
+    <string name="start">ప్రారంభించు</string>
+    <string name="learn_explore">నేర్చుకోండి &amp; అన్వేషించండి</string>
+    <string name="article">ఆర్టికల్</string>
+    <string name="infographic">ఇన్ఫోగ్రాఫిక్</string>
+    <string name="video">వీడియో</string>
+    <string name="quiz">క్విజ్</string>
+    <string name="min_read">%d నిమి</string>
+    <string name="read">చదవండి</string>
+    <string name="india_green_railway">భారతదేశ గ్రీన్ రైల్వే</string>
+    <string name="progress_sustainability">సుస్థిరత వైపు పురోగతి</string>
+    <string name="electrification">విద్యుదీకరణ</string>
+    <string name="routes_electrified">90%% మార్గాలు విద్యుదీకరించబడ్డాయి</string>
+    <string name="solar_stations">సోలార్ స్టేషన్లు</string>
+    <string name="solar_powered_stations">960+ సోలార్ పవర్డ్ స్టేషన్లు</string>
+    <string name="net_zero_goal">నెట్ జీరో లక్ష్యం</string>
+    <string name="target_2030">లక్ష్యం: 2030</string>
+    <string name="question_of">ప్రశ్న %1$d/%2$d</string>
+    <string name="score">స్కోర్: %d</string>
+    <string name="quiz_complete">క్విజ్ పూర్తయింది!</string>
+    <string name="scored_out_of">మీరు %2$d లో %1$d స్కోర్ చేసారు</string>
+    <string name="excellent_eco_expert">అద్భుతం! మీరు ఎకో నిపుణులు! 🌿</string>
+    <string name="good_job_learning">బాగుంది! నేర్చుకుంటూ ఉండండి! 📖</string>
+    <string name="nice_try_improve">మంచి ప్రయత్నం! మెరుగుపడే అవకాశం ఉంది! 💪</string>
+    <string name="keep_exploring">మరింత నేర్చుకోవడానికి అన్వేషించండి! 🔍</string>
+    <string name="check_answer">సమాధానం తనిఖీ చేయండి</string>
+    <string name="next_question">తదుపరి ప్రశ్న</string>
+    <string name="see_results">ఫలితాలు చూడండి</string>
+    <string name="done">పూర్తయింది</string>
+    <string name="exit_quiz">క్విజ్ నుండి నిష్క్రమించు</string>
+    
+    <!-- Quiz Questions -->
+    <string name="quiz_q1">భారతీయ రైల్వేలో ఎంత శాతం విద్యుదీకరించబడింది?</string>
+    <string-array name="quiz_q1_options">
+        <item>50%</item>
+        <item>90%</item>
+        <item>70%</item>
+        <item>95%</item>
+    </string-array>
+    <string name="quiz_q1_explanation">2024 నాటికి, భారతీయ రైల్వేలో 90% కంటే ఎక్కువ విద్యుదీకరించబడింది!</string>
+    
+    <string name="quiz_q2">రోడ్డు కంటే రైలు కి.మీ.కు ఎంత CO2 ఆదా చేస్తుంది?</string>
+    <string-array name="quiz_q2_options">
+        <item>80%</item>
+        <item>50%</item>
+        <item>70%</item>
+        <item>90%</item>
+    </string-array>
+    <string name="quiz_q2_explanation">రైలు రవాణా రోడ్డు రవాణా కంటే 80% తక్కువ CO2 ఉత్పత్తి చేస్తుంది.</string>
+    
+    <string name="quiz_q3">రీజెనరేటివ్ బ్రేకింగ్ అంటే ఏమిటి?</string>
+    <string-array name="quiz_q3_options">
+        <item>సోలార్ ప్యానెల్స్ వాడటం</item>
+        <item>గాలి శక్తి వాడటం</item>
+        <item>మాన్యువల్ బ్రేకింగ్</item>
+        <item>గతి శక్తిని విద్యుత్తుగా మార్చడం</item>
+    </string-array>
+    <string name="quiz_q3_explanation">రీజెనరేటివ్ బ్రేకింగ్ రైలు నెమ్మదించినప్పుడు గతి శక్తిని తిరిగి విద్యుత్తుగా మారుస్తుంది.</string>
+    
+    <string name="quiz_q4">భారతదేశంలో ఎన్ని స్టేషన్లు సోలార్ పవర్డ్?</string>
+    <string-array name="quiz_q4_options">
+        <item>100+</item>
+        <item>960+</item>
+        <item>500+</item>
+        <item>1500+</item>
+    </string-array>
+    <string name="quiz_q4_explanation">భారతదేశంలో 960 కంటే ఎక్కువ రైల్వే స్టేషన్లు ఇప్పుడు సోలార్ పవర్‌తో నడుస్తున్నాయి!</string>
+    
+    <string name="quiz_q5">భారతీయ రైల్వే నెట్-జీరో లక్ష్య సంవత్సరం ఏమిటి?</string>
+    <string-array name="quiz_q5_options">
+        <item>2030</item>
+        <item>2025</item>
+        <item>2040</item>
+        <item>2050</item>
+    </string-array>
+    <string name="quiz_q5_explanation">భారతీయ రైల్వే 2030 నాటికి నెట్-జీరో కార్బన్ ఎమిటర్ కావాలని లక్ష్యంగా పెట్టుకుంది.</string>
+    
+    <!-- Smart Planner -->
+    <string name="smart_planner">స్మార్ట్ ప్లానర్</string>
+    <string name="plan_eco_friendly">ఎకో-ఫ్రెండ్లీ ట్రిప్‌లు ప్లాన్ చేయండి</string>
+    <string name="search_routes">మార్గాలు వెతకండి</string>
+    <string name="eco_routes">ఎకో మార్గాలు</string>
+    <string name="green_recommended">గ్రీన్ సిఫార్సు</string>
+    <string name="enter_origin">ప్రారంభ స్టేషన్ నమోదు చేయండి</string>
+    <string name="enter_destination">గమ్యస్థాన స్టేషన్ నమోదు చేయండి</string>
+    <string name="co2_footprint">CO₂ ఫుట్‌ప్రింట్</string>
+    <string name="duration">వ్యవధి</string>
+    <string name="distance">దూరం</string>
+    <string name="min">నిమి</string>
+    <string name="km">కి.మీ</string>
+    <string name="kg">కేజీ</string>
+    <string name="renewable_stations">పునరుత్పాదక స్టేషన్లు</string>
+    <string name="congestion">రద్దీ</string>
+    <string name="low">తక్కువ</string>
+    <string name="high">ఎక్కువ</string>
+    <string name="select_route">మార్గం ఎంచుకోండి</string>
+    <string name="find_eco_routes">ఎకో-ఫ్రెండ్లీ మార్గాలు కనుగొనండి</string>
+    <string name="plan_your_journey">మీ ప్రయాణాన్ని ప్లాన్ చేయండి</string>
+    <string name="find_most_eco_route">అత్యంత ఎకో-ఫ్రెండ్లీ మార్గాన్ని కనుగొనండి</string>
+    <string name="enter_departure">బయలుదేరే స్టేషన్ నమోదు చేయండి</string>
+    <string name="find_routes">మార్గాలు కనుగొనండి</string>
+    <string name="eco_smart_routing">ఎకో-స్మార్ట్ రూటింగ్</string>
+    <string name="routes_sorted_carbon">తక్కువ కార్బన్ ఫుట్‌ప్రింట్ ప్రకారం మార్గాలు క్రమబద్ధీకరించబడ్డాయి</string>
+    <string name="available_routes">అందుబాటులో ఉన్న మార్గాలు</string>
+    <string name="route_selected">మార్గం ఎంపిక చేయబడింది: %1$s నుండి %2$s</string>
+    <string name="standard_route">ప్రామాణిక మార్గం</string>
+    <string name="traffic">ట్రాఫిక్</string>
+    <string name="select">ఎంచుకోండి</string>
+    <string name="finding_routes">ఉత్తమ మార్గాలు కనుగొంటోంది...</string>
+    <string name="co2">CO₂</string> 
+   
+    <!-- More Screen -->
+    <string name="more_features">మరిన్ని ఫీచర్లు</string>
+    <string name="explore_eco_features">అన్ని ఎకో ఫీచర్లను అన్వేషించండి</string>
+    <string name="explore_features">ఫీచర్లు అన్వేషించు</string>
+    <string name="discover_sustainable">సుస్థిరంగా ప్రయాణించడానికి మరిన్ని మార్గాలు కనుగొనండి</string>
+    <string name="about">గురించి</string>
+    <string name="sustainable_travel_platform">సుస్థిర ప్రయాణ ప్లాట్‌ఫారం</string>
+    <string name="about_description">ప్రతి ప్రయాణాన్ని పచ్చని భవిష్యత్తు వైపు లెక్కించేలా చేస్తోంది. మీ కార్బన్ ఆదాను ట్రాక్ చేయండి, ఎకో-ఫ్రెండ్లీ మార్గాలను కనుగొనండి, సుస్థిర ప్రయాణ ఉద్యమంలో చేరండి.</string>
+    <string name="version">వెర్షన్ 1.0.0</string>
+    <string name="made_for_sustainable">సుస్థిర భవిష్యత్తు కోసం తయారు చేయబడింది</string>
+    <string name="realtime_train_energy">రియల్-టైమ్ రైలు శక్తి వాడకం</string>
+    <string name="book_tickets">టిక్కెట్లు బుక్ చేయండి</string>
+    <string name="plan_eco_routes">ఎకో-ఫ్రెండ్లీ మార్గాలు ప్లాన్ చేయండి</string>
+    <string name="support_desc">గ్రీన్ ఇనిషియేటివ్‌లకు సపోర్ట్</string>
+    <string name="rail_sustainability_facts">రైల్ సుస్థిరత వాస్తవాలు</string>
+    
+    <!-- Settings -->
+    <string name="general">సాధారణ</string>
+    <string name="appearance">రూపం</string>
+    <string name="dark_mode">డార్క్ మోడ్</string>
+    <string name="use_dark_theme">డార్క్ థీమ్ వాడండి</string>
+    <string name="notifications">నోటిఫికేషన్లు</string>
+    <string name="push_notifications">పుష్ నోటిఫికేషన్లు</string>
+    <string name="receive_updates">ట్రిప్ మరియు ఎకో అప్‌డేట్లు పొందండి</string>
+    <string name="location_services">లొకేషన్ సర్వీసులు</string>
+    <string name="enable_nearby_stations">సమీపంలోని స్టేషన్ల కోసం ఎనేబుల్ చేయండి</string>
+    <string name="auto_sync">ఆటో సింక్</string>
+    <string name="sync_automatically">డేటాను ఆటోమేటిక్‌గా సింక్ చేయండి</string>
+    <string name="data_storage">డేటా &amp; స్టోరేజ్</string>
+    <string name="clear_cache">కాష్ క్లియర్ చేయి</string>
+    <string name="free_storage">స్టోరేజ్ స్పేస్ ఖాళీ చేయండి</string>
+    <string name="download_maps">మ్యాప్‌లు డౌన్‌లోడ్ చేయి</string>
+    <string name="offline_access">ఆఫ్‌లైన్ మ్యాప్ యాక్సెస్</string>
+    <string name="backup_data">డేటా బ్యాకప్</string>
+    <string name="sync_to_cloud">క్లౌడ్‌కు సింక్ చేయి</string>
+    <string name="help_center">హెల్ప్ సెంటర్</string>
+    <string name="faqs_guides">FAQలు మరియు గైడ్‌లు</string>
+    <string name="send_feedback">ఫీడ్‌బ్యాక్ పంపండి</string>
+    <string name="help_improve">మెరుగుపరచడంలో సహాయం చేయండి</string>
+    <string name="report_bug">బగ్ రిపోర్ట్ చేయి</string>
+    <string name="let_us_know">సమస్యల గురించి మాకు తెలియజేయండి</string>
+    <string name="language">భాష</string>
+    <string name="english">English</string>
+    <string name="telugu">తెలుగు</string>
+    <string name="select_language">భాష ఎంచుకోండి</string>
+    <string name="customize_experience">మీ అనుభవాన్ని అనుకూలీకరించండి</string>    
+
+    <!-- Auth -->
+    <string name="welcome_back">తిరిగి స్వాగతం</string>
+    <string name="sign_in_continue">మీ ఎకో ప్రయాణాన్ని కొనసాగించడానికి సైన్ ఇన్ చేయండి</string>
+    <string name="email">ఇమెయిల్</string>
+    <string name="password">పాస్‌వర్డ్</string>
+    <string name="dont_have_account">ఖాతా లేదా?</string>
+    <string name="already_have_account">ఇప్పటికే ఖాతా ఉందా?</string>
+    <string name="create_account">ఖాతా సృష్టించు</string>
+    <string name="join_green_movement">గ్రీన్ ఉద్యమంలో చేరండి</string>
+    <string name="full_name">పూర్తి పేరు</string>
+    <string name="confirm_password">పాస్‌వర్డ్ నిర్ధారించు</string>
+    <string name="neural_rail">న్యూరల్‌రైల్</string>
+    <string name="sustainable_travel_companion">సుస్థిర ప్రయాణ సహచరుడు</string>
+    <string name="terms_privacy">కొనసాగించడం ద్వారా, మీరు మా సేవా నిబంధనలు\nమరియు గోప్యతా విధానానికి అంగీకరిస్తున్నారు</string>
+    <string name="sign_in">సైన్ ఇన్</string>
+    <string name="sign_up">సైన్ అప్</string>
+    
+    <!-- User Drawer -->
+    <string name="achievements">అచీవ్‌మెంట్లు</string>
+    <string name="my_trips">నా ట్రిప్‌లు</string>
+    <string name="view_profile">ప్రొఫైల్ చూడు</string>
+    <string name="eco_traveler">ఎకో ట్రావెలర్</string>
+    <string name="my_profile">నా ప్రొఫైల్</string>
+    <string name="log_out">లాగ్ అవుట్</string>
+    <string name="guest_user">అతిథి వినియోగదారు</string>
+    
+    <!-- Language Selection -->
+    <string name="choose_language">భాష ఎంచుకోండి</string>
+    <string name="select_preferred_language">మీకు ఇష్టమైన భాషను ఎంచుకోండి</string>
+    <string name="continue_text">కొనసాగించు</string>
+    
+    <!-- Delay Reasons -->
+    <string name="signal_failure">సిగ్నల్ వైఫల్యం</string>
+    <string name="track_maintenance">ట్రాక్ నిర్వహణ</string>
+    <string name="weather_conditions">వాతావరణ పరిస్థితులు</string>
+    <string name="technical_issue">సాంకేతిక సమస్య</string>
+    <string name="passenger_emergency">ప్రయాణికుల అత్యవసర పరిస్థితి</string>
+    <string name="security_check">భద్రతా తనిఖీ</string>
+    <string name="track_congestion">ట్రాక్ రద్దీ</string>
+    <string name="accident_ahead">ముందు ప్రమాదం</string>
+    <string name="power_failure">విద్యుత్ వైఫల్యం</string>
+    <string name="crew_change">సిబ్బంది మార్పు</string>
+    <string name="unknown">తెలియదు</string>
+    
+    <!-- Additional strings -->
+    <string name="neural">న్యూరల్</string>
+    <string name="rail">రైల్</string>
+    <string name="guest">అతిథి</string>
+    
+    <!-- About Screen -->
+    <string name="learn_about_neuralrail">న్యూరల్‌రైల్ గురించి తెలుసుకోండి</string>
+    <string name="our_mission">మా లక్ష్యం</string>
+    <string name="mission_description">న్యూరల్‌రైల్ సుస్థిర ప్రయాణాన్ని అందుబాటులో మరియు ప్రతిఫలదాయకంగా చేయడానికి అంకితం చేయబడింది. ప్రతి ప్రయాణం పచ్చని భవిష్యత్తుకు దోహదపడగలదని మేము నమ్ముతున్నాము. స్మార్ట్ టెక్నాలజీని గేమిఫికేషన్‌తో కలపడం ద్వారా, ప్రయాణికులు తమ ప్రయాణాన్ని ఆనందిస్తూ ఎకో-స్పృహతో ఎంపికలు చేసుకోవడానికి మేము సాధికారత కల్పిస్తాము.</string>
+    <string name="features">ఫీచర్లు</string>
+    <string name="smart_travel">స్మార్ట్ ట్రావెల్</string>
+    <string name="smart_travel_desc">ఎకో-ఫ్రెండ్లీ ప్రయాణాల కోసం AI-పవర్డ్ రూట్ ప్లానింగ్</string>
+    <string name="carbon_tracking">కార్బన్ ట్రాకింగ్</string>
+    <string name="carbon_tracking_desc">మీ కార్బన్ ఫుట్‌ప్రింట్‌ను పర్యవేక్షించండి మరియు ఆఫ్‌సెట్ చేయండి</string>
+    <string name="gamification">గేమిఫికేషన్</string>
+    <string name="gamification_desc">బ్యాడ్జ్‌లు సంపాదించండి మరియు గ్రీన్ ఛాలెంజ్‌లలో పోటీ పడండి</string>
+    <string name="community_watch">కమ్యూనిటీ వాచ్</string>
+    <string name="community_watch_feature_desc">శక్తి వృధాను నివేదించండి మరియు రివార్డ్‌లు సంపాదించండి</string>
+    <string name="legal">చట్టపరమైన</string>
+    <string name="terms_of_service">సేవా నిబంధనలు</string>
+    <string name="privacy_policy">గోప్యతా విధానం</string>
+    <string name="licenses">లైసెన్సులు</string>
+    
+    <!-- User Profile Screen -->
+    <string name="manage_account">మీ ఖాతాను నిర్వహించండి</string>
+    <string name="user">వినియోగదారు</string>
+    <string name="eco_warrior">ఎకో వారియర్</string>
+    <string name="kg_co2_saved">కేజీ CO₂ ఆదా</string>
+    <string name="total_trips">మొత్తం ట్రిప్‌లు</string>
+    <string name="day_streak_label">రోజు స్ట్రీక్</string>
+    <string name="account_settings">ఖాతా సెట్టింగ్‌లు</string>
+    <string name="edit_profile">ప్రొఫైల్ సవరించు</string>
+    <string name="update_personal_info">మీ వ్యక్తిగత సమాచారాన్ని అప్‌డేట్ చేయండి</string>
+    <string name="manage_notifications">నోటిఫికేషన్ ప్రాధాన్యతలను నిర్వహించండి</string>
+    <string name="privacy_security">గోప్యత &amp; భద్రత</string>
+    <string name="password_security">పాస్‌వర్డ్ మరియు భద్రతా సెట్టింగ్‌లు</string>
+    
+    <!-- Auth Screen -->
+    <string name="forgot_password">పాస్‌వర్డ్ మర్చిపోయారా?</string>
+    <string name="or_continue_with">లేదా దీనితో కొనసాగించండి</string>
+    <string name="google">Google</string>
+    <string name="phone">ఫోన్</string>
+    <string name="phone_number">ఫోన్ నంబర్</string>
+    <string name="valid_email_error">దయచేసి చెల్లుబాటు అయ్యే ఇమెయిల్ నమోదు చేయండి</string>
+    <string name="password_min_error">పాస్‌వర్డ్ కనీసం 6 అక్షరాలు ఉండాలి</string>
+    <string name="name_required_error">దయచేసి మీ పేరు నమోదు చేయండి</string>
+    <string name="phone_error">దయచేసి చెల్లుబాటు అయ్యే ఫోన్ నంబర్ నమోదు చేయండి</string>
+    <string name="passwords_not_match">పాస్‌వర్డ్‌లు సరిపోలడం లేదు</string>
+    <string name="at_least_6_chars">కనీసం 6 అక్షరాలు</string>
+    <string name="contains_uppercase">పెద్ద అక్షరం కలిగి ఉంది</string>
+    <string name="contains_number">సంఖ్య కలిగి ఉంది</string>
+    <string name="join_sustainable_movement">సుస్థిర ప్రయాణ ఉద్యమంలో చేరండి</string>
+    
+    <!-- QR Scanner additional -->
+    <string name="unknown_qr_content">తెలియని QR కంటెంట్</string>
+    <string name="unrecognized_format">గుర్తించబడని ఫార్మాట్</string>
+    <string name="scan_error">స్కాన్ లోపం</string>
+    <string name="try_again">మళ్ళీ ప్రయత్నించండి</string>
+    
+    <!-- Article Detail Screen -->
+    <string name="min_read_format">%d నిమి చదవడానికి</string>
+    <string name="key_takeaways">ముఖ్య అంశాలు</string>
+    <string name="takeaway_1">సుస్థిర రైలు ప్రయాణం కార్బన్ ఉద్గారాలను గణనీయంగా తగ్గిస్తుంది</string>
+    <string name="takeaway_2">ఆధునిక రైళ్లు శక్తిని తిరిగి పొందడానికి రీజెనరేటివ్ బ్రేకింగ్ ఉపయోగిస్తాయి</string>
+    <string name="takeaway_3">సోలార్ పవర్డ్ స్టేషన్లు కొత్త ప్రమాణంగా మారుతున్నాయి</string>
+    <string name="saved">సేవ్ చేయబడింది</string>
+    <string name="save_action">సేవ్</string>
+    <string name="related_topics">సంబంధిత అంశాలు</string>
+    <string name="energy_efficiency">శక్తి సామర్థ్యం</string>
+    <string name="green_travel">గ్రీన్ ట్రావెల్</string>
+    <string name="solar_power">సోలార్ పవర్</string>
+    <string name="like">లైక్</string>
+    <string name="bookmark">బుక్‌మార్క్</string>
+    
+    <!-- Achievements Screen -->
+    <string name="unlocked">అన్‌లాక్ చేయబడింది</string>
+    <string name="achievements_earned">%d అచీవ్‌మెంట్లు సంపాదించారు</string>
+    <string name="in_progress_title">ప్రోగ్రెస్‌లో</string>
+    <string name="achievements_remaining">%d అచీవ్‌మెంట్లు మిగిలి ఉన్నాయి</string>
+    <string name="your_progress">మీ ప్రోగ్రెస్</string>
+    <string name="completion_rate">పూర్తి రేటు</string>
+    <string name="of_total">%d లో</string>
+    <string name="unlocked_of_total">%2$d లో %1$d అన్‌లాక్ చేయబడింది</string>
+    
+    <!-- Challenge Titles and Descriptions -->
+    <string name="challenge_rail_rider">రైల్ రైడర్</string>
+    <string name="challenge_rail_rider_desc">ఈ రోజు క్యాబ్ బదులు రైలులో ప్రయాణించండి</string>
+    <string name="challenge_walk_mile">మైలు నడక</string>
+    <string name="challenge_walk_mile_desc">ఆటో బదులు 1 కి.మీ నడవండి</string>
+    <string name="challenge_off_peak">ఆఫ్-పీక్ హీరో</string>
+    <string name="challenge_off_peak_desc">ఆఫ్-పీక్ సమయంలో ప్రయాణించండి (10AM-4PM)</string>
+    <string name="challenge_share_care">షేర్ &amp; కేర్</string>
+    <string name="challenge_share_care_desc">మీ ఎకో స్టాట్స్‌ను 3 మిత్రులతో షేర్ చేయండి</string>
+    <string name="challenge_weekly_commuter">వారపు కమ్యూటర్</string>
+    <string name="challenge_weekly_commuter_desc">ఈ వారం 5 రైలు ట్రిప్‌లు చేయండి</string>
+    <string name="challenge_marathon_walker">మారథాన్ వాకర్</string>
+    <string name="challenge_marathon_walker_desc">ఈ వారం మొత్తం 10 కి.మీ నడవండి</string>
+    <string name="challenge_green_reporter">గ్రీన్ రిపోర్టర్</string>
+    <string name="challenge_green_reporter_desc">2 శక్తి వృధా సమస్యలను నివేదించండి</string>
+    <string name="challenge_community_hero">కమ్యూనిటీ హీరో</string>
+    <string name="challenge_community_hero_desc">సమాజానికి 1000 కేజీ CO2 ఆదా చేయడంలో సహాయం చేయండి</string>
+    <string name="time_7_days">7 రోజులు</string>
+    <string name="time_48_hours">48 గంటలు</string>
+    <string name="time_3_days">3 రోజులు</string>
+    <string name="time_expired">గడువు ముగిసింది</string>
+</resources>
