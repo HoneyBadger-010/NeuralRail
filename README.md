@@ -182,21 +182,36 @@ Crowdsourced energy wastage reporting and eco-commute tracking.
 
 ### 📹 Full Demonstration Video
 
-**Watch the complete system in action:**
+<div align="center">
 
-https://github.com/HoneyBadger-010/NeuralRail/assets/GDG_Final.mp4
+[![Watch Full Demo](https://img.shields.io/badge/▶️_WATCH_FULL_DEMO_VIDEO-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](NeuralRail1/GDG_Final.mp4)
 
-> 🎬 **Video File:** [Click here to download and watch GDG_Final.mp4](NeuralRail1/GDG_Final.mp4)
-> 
-> **What's Covered:**
-> - Live conflict detection and resolution
-> - AI decision-making process with energy calculations
-> - Real-time dashboard visualization
-> - Android app features (QR scanner, AI reporting)
-> - All 5 demo scenarios
-> - Energy savings dashboard
+**👆 Click above to watch the complete presentation video**
+
+<table>
+<tr>
+<td width="50%">
+<img src="NeuralRail1/screenshot/image.png" width="100%"/>
+<p align="center"><b>🖥️ Web Dashboard Demo</b></p>
+</td>
+<td width="50%">
+<img src="AndroidApp1/NeuralRailApp/screenshot/Screenshot_20260125-081121.png" width="100%"/>
+<p align="center"><b>📱 Android App Demo</b></p>
+</td>
+</tr>
+</table>
+
+</div>
+
+> 🎬 **Video Contents:**
+> - ✅ Live conflict detection and resolution
+> - ✅ AI decision-making process with energy calculations
+> - ✅ Real-time dashboard visualization
+> - ✅ Android app features (QR scanner, AI reporting)
+> - ✅ All 5 demo scenarios walkthrough
+> - ✅ Energy savings dashboard in action
 >
-> *Note: GitHub doesn't support embedded video playback in README. Download the video file to watch the full presentation.*
+> 📥 **Download:** [GDG_Final.mp4](NeuralRail1/GDG_Final.mp4) (Right-click → Save As)
 
 ---
 
