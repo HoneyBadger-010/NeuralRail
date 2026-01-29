@@ -223,12 +223,18 @@ Crowdsourced energy wastage reporting and eco-commute tracking.
 <tr>
 <td align="center"><b>Main Dashboard - Live Train Tracking & Conflict Detection</b></td>
 </tr>
+</table>
+
+<table>
 <tr>
 <td><img src="NeuralRail1/screenshot/image(1).png" width="100%"/></td>
 </tr>
 <tr>
 <td align="center"><b>AI Recommendations Panel - Energy-Optimized Solutions</b></td>
 </tr>
+</table>
+
+<table>
 <tr>
 <td><img src="NeuralRail1/screenshot/image(2).png" width="100%"/></td>
 </tr>
