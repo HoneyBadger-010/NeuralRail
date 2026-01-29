@@ -2,16 +2,15 @@
 
 <div align="center">
 
-![NeuralRail Dashboard](NeuralRail1/screenshot/Screenshot_20260124-225558.png)
+![NeuralRail Dashboard](NeuralRail1/screenshot/image.png)
 
 **Reducing Railway Delays & Energy Waste Through Artificial Intelligence**
 
-[![Watch Demo](https://img.shields.io/badge/▶️_Watch_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](NeuralRail1/GDG_Final.mp4)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
 [![AI](https://img.shields.io/badge/Google_Gemini-8E75B2?style=flat&logo=google&logoColor=white)](https://ai.google.dev/)
 
-[🎥 Watch Full Demo](NeuralRail1/GDG_Final.mp4) • [📱 Android App](#-android-app) • [🖥️ Web Dashboard](#-web-dashboard) • [📊 Impact](#-measurable-impact)
+[🎥 Watch Demo Video](#-product-demo) • [📱 Android App](#-android-app) • [🖥️ Web Dashboard](#-web-dashboard) • [📊 Impact](#-measurable-impact)
 
 </div>
 
@@ -185,9 +184,9 @@ Crowdsourced energy wastage reporting and eco-commute tracking.
 
 **Watch the complete system in action:**
 
-https://github.com/user-attachments/assets/[YOUR-VIDEO-ID]
+https://github.com/HoneyBadger-010/NeuralRail/assets/GDG_Final.mp4
 
-> 🎬 **Video Location:** `NeuralRail1/GDG_Final.mp4`
+> 🎬 **Video File:** [Click here to download and watch GDG_Final.mp4](NeuralRail1/GDG_Final.mp4)
 > 
 > **What's Covered:**
 > - Live conflict detection and resolution
@@ -196,6 +195,8 @@ https://github.com/user-attachments/assets/[YOUR-VIDEO-ID]
 > - Android app features (QR scanner, AI reporting)
 > - All 5 demo scenarios
 > - Energy savings dashboard
+>
+> *Note: GitHub doesn't support embedded video playback in README. Download the video file to watch the full presentation.*
 
 ---
 
@@ -205,7 +206,26 @@ https://github.com/user-attachments/assets/[YOUR-VIDEO-ID]
 
 <div align="center">
 
-![Dashboard Main View](NeuralRail1/screenshot/Screenshot_20260124-225558.png)
+<table>
+<tr>
+<td><img src="NeuralRail1/screenshot/image.png" width="100%"/></td>
+</tr>
+<tr>
+<td align="center"><b>Main Dashboard - Live Train Tracking & Conflict Detection</b></td>
+</tr>
+<tr>
+<td><img src="NeuralRail1/screenshot/image(1).png" width="100%"/></td>
+</tr>
+<tr>
+<td align="center"><b>AI Recommendations Panel - Energy-Optimized Solutions</b></td>
+</tr>
+<tr>
+<td><img src="NeuralRail1/screenshot/image(2).png" width="100%"/></td>
+</tr>
+<tr>
+<td align="center"><b>Energy Dashboard - Real-Time Savings Tracking</b></td>
+</tr>
+</table>
 
 </div>
 
