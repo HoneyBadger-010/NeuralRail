@@ -2,7 +2,13 @@
 
 <div align="center">
 
-![NeuralRail Dashboard](NeuralRail1/screenshot/image.png)
+## 📹 Complete Product Presentation
+
+![NeuralRail Complete Demo](NeuralRail1/assets/GDG_Final-ezgif.com-gif-maker.gif)
+
+**☝️ Watch the full presentation above - covers problem, solution, demo, and impact**
+
+---
 
 **Reducing Railway Delays & Energy Waste Through Artificial Intelligence**
 
@@ -10,7 +16,7 @@
 [![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
 [![AI](https://img.shields.io/badge/Google_Gemini-8E75B2?style=flat&logo=google&logoColor=white)](https://ai.google.dev/)
 
-[🎥 Watch Demo Video](#-product-demo) • [📱 Android App](#-android-app) • [🖥️ Web Dashboard](#-web-dashboard) • [📊 Impact](#-measurable-impact)
+[📱 Android App](#-android-app) • [🖥️ Web Dashboard](#-web-dashboard) • [📊 Impact](#-measurable-impact) • [💰 Business Model](#-business-model)
 
 </div>
 
