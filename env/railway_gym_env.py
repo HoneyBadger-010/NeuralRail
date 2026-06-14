@@ -123,12 +123,38 @@ class RailwayGymEnv(gym.Env):
 
         e = self.energy_model.step_energy(prev_obs, next_obs)
         norm_e = min(e.total_kwh / self.energy_ref_kwh, 1.0)
-        reward = float(base - self.w_energy * norm_e)
+
+        # NOTE: the simulator's ported `base` reward adds ~+0.5 every step and the
+        # episode ends on completion — so a return-maximiser learns to STALL forever
+        # (0% arrival). We shape our own RL reward here: deliver trains fast, on time,
+        # safely, with low energy. (sim `base` kept in info for reference.)
+        reward = 0.0
+        active = 0
+        for tid, nt in next_obs.trains.items():
+            pt = prev_obs.trains.get(tid)
+            if pt is None:
+                continue
+            if pt.status not in _TERMINAL and nt.current_segment != pt.current_segment:
+                reward += 0.05  # progress (routes are forward-only → always toward dest)
+            if pt.status not in _TERMINAL and nt.status in _TERMINAL:
+                reward += 1.0   # arrival
+                if nt.status == TrainStatus.ARRIVED and nt.delay == 0:
+                    reward += 0.5 * nt.priority      # on-time bonus (priority-weighted)
+                else:
+                    reward -= 0.05 * min(nt.delay, 10)
+            if nt.status not in _TERMINAL:
+                active += 1
+        reward -= 2.0 * self.sim.collisions_this_step  # safety dominates
+        reward -= 0.02 * active                         # time pressure — no stalling
+        all_arrived = active == 0
+        if all_arrived:
+            reward += 2.0                               # completion bonus
+        reward -= self.w_energy * norm_e                # energy efficiency (small)
+        reward = float(reward)
 
         self._cum_kwh += e.total_kwh
         self._last_per_train_kwh = e.per_train_kwh
 
-        all_arrived = all(t.status in _TERMINAL for t in next_obs.trains.values())
         terminated = bool(all_arrived)
         truncated = bool(self.sim.step_count >= self.sim.max_steps and not all_arrived)
 

@@ -66,11 +66,45 @@ def test_action_mask_shape_and_terminal_logic():
     assert mask.all() or mask.any()
 
 
-def test_w_energy_zero_matches_base_reward():
-    """With w_energy=0 the reward must equal the simulator's base reward exactly."""
+def test_w_energy_zero_has_no_energy_term():
+    """w_energy=0 is the energy ablation: the reward carries no energy penalty."""
     from env.railway_gym_env import RailwayGymEnv
 
     env = RailwayGymEnv("basic_control", w_energy=0.0)
     env.reset(seed=3)
-    _obs, reward, _t, _tr, info = env.step(env.action_space.sample())
-    assert reward == pytest.approx(info["base_reward"])
+    _obs, _reward, _t, _tr, info = env.step(env.action_space.sample())
+    assert info["energy_term"] == pytest.approx(0.0)
+
+
+def test_arrival_reward_positive_and_no_stall_exploit():
+    """A run that delivers trains must out-score a run that stalls them — i.e.
+    the reward no longer rewards stalling (the bug that gave 0% arrival)."""
+    from env.railway_gym_env import RailwayGymEnv
+    from sim.models import TrainStatus
+
+    # Deliver: all-green, never hold -> trains reach destinations.
+    deliver = RailwayGymEnv("basic_control", w_energy=0.05)
+    deliver.reset(seed=0)
+    green = deliver.action_space.nvec.copy()
+    green[: len(deliver._segment_ids)] = 2  # all signals GREEN
+    green[len(deliver._segment_ids):] = 0   # release all
+    deliver_ret, term = 0.0, False
+    for _ in range(deliver.sim.max_steps):
+        _o, r, term, trunc, _i = deliver.step(green)
+        deliver_ret += r
+        if term or trunc:
+            break
+    assert term  # all trains actually arrived
+
+    # Stall: hold every train every step -> nothing arrives.
+    stall = RailwayGymEnv("basic_control", w_energy=0.05)
+    stall.reset(seed=0)
+    hold = stall.action_space.nvec.copy()
+    hold[: len(stall._segment_ids)] = 0     # all RED
+    hold[len(stall._segment_ids):] = 1      # hold all
+    stall_ret = 0.0
+    for _ in range(stall.sim.max_steps):
+        _o, r, _t, _tr, info = stall.step(hold)
+        stall_ret += r
+    assert info["trains_arrived"] == 0
+    assert deliver_ret > stall_ret  # delivering beats stalling

@@ -9,6 +9,13 @@ CSV. Includes the RL agent automatically if a checkpoint exists.
 
 from __future__ import annotations
 
+import sys as _sys
+try:  # make ✓/₹/box-drawing output work on Windows consoles (cp1252)
+    _sys.stdout.reconfigure(encoding="utf-8")
+    _sys.stderr.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
 import argparse
 import csv
 import os
