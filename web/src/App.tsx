@@ -9,6 +9,7 @@ import TransportBar from "./components/TransportBar";
 import ScenarioSelector from "./components/ScenarioSelector";
 import ComparePanel from "./components/ComparePanel";
 import TrainingProof from "./components/TrainingProof";
+import Icon from "./components/Icon";
 
 function BootScreen() {
   return (
@@ -70,8 +71,9 @@ export default function App() {
       <div style={{ borderTop: "1px solid var(--hair-strong)", background: "var(--bg-2)" }}>
         <TransportBar />
         <div className="hazard" style={{ display: "flex", alignItems: "center", gap: 8,
-              padding: "5px 16px", borderTop: "1px solid var(--hair)" }}>
-          <span className="label" style={{ color: "var(--hv)" }}>⚠ Notice</span>
+              padding: "6px 16px", borderTop: "1px solid var(--hair)" }}>
+          <Icon name="warning" size={14} color="var(--hv)" />
+          <span className="label" style={{ color: "var(--hv)" }}>Notice</span>
           <span className="mono" style={{ fontSize: 10.5, color: "var(--ink-1)" }}>
             Decision-support & research simulation only — NOT connected to, and NOT for control of, real railway signalling or trains.
           </span>
