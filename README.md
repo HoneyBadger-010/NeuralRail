@@ -13,16 +13,14 @@
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-F4791F)](LICENSE)
 
-**FAR AWAY 2026** · Theme: **Railways** + **Agentic & Autonomous Systems**
-
-🔗 **Live demo:** _&lt;add deployed URL&gt;_ · 🎥 **Video:** [docs/GDG_Final.mp4](docs/GDG_Final.mp4)
+🔗 **Live demo:** _&lt;add deployed URL&gt;_ · 🎥 **Video:** [docs/demo-walkthrough.mp4](docs/demo-walkthrough.mp4)
 
 </div>
 
 > ⚠️ **Decision-support & research simulation only.** NeuralRail is **not** connected to, and **not** for control of, real railway signalling or trains. All figures are model estimates on a stylised network.
 
 <div align="center">
-<img src="docs/ui-dashboard.png" width="90%" alt="NeuralRail CTC control room — live RL agent"/>
+<img src="docs/ui-dashboard.png" width="90%" alt="NeuralRail control room — live RL agent"/>
 <br/><em>The live control room — a trained PPO agent dispatching a section, with energy/throughput KPIs and the training-proof panel.</em>
 </div>
 
@@ -32,12 +30,12 @@
 
 <div align="center">
 <img src="docs/demo.gif" width="80%" alt="NeuralRail walkthrough"/>
-<br/><em>Full walkthrough — problem, solution, demo, impact. High-quality video: <a href="docs/GDG_Final.mp4">docs/GDG_Final.mp4</a></em>
+<br/><em>Full walkthrough — problem, solution, demo, impact. High-quality video: <a href="docs/demo-walkthrough.mp4">docs/demo-walkthrough.mp4</a></em>
 </div>
 
 ## What it is
 
-NeuralRail is a **central traffic controller** for a railway network, driven by a **trained reinforcement-learning agent**. Each step the agent sees the whole section — every train, signal and block — and sets signals / holds trains so the network runs **safely, on time, and with the least energy**. A custom ops-room UI streams the agent live, explains every decision, and quantifies the energy (kWh / ₹ / CO₂) saved versus baselines.
+NeuralRail is a **central traffic controller** for a railway network, driven by a **trained reinforcement-learning agent**. Each step the agent sees the whole section — every train, signal and block — and sets signals / holds trains so the network runs **safely, on time, and with the least energy**. A custom ops-room UI streams the agent live, explains every decision, and quantifies the energy (kWh / cost / CO₂) saved versus baselines.
 
 The novel idea is that the agent is **energy-aware**: a physics-based energy model (kinetic energy, regenerative braking, idle draw, restart cost) is folded directly into the RL reward, so the policy *learns* that needless stops and restarts of heavy trains waste energy — and avoids them.
 
@@ -45,29 +43,20 @@ The novel idea is that the agent is **energy-aware**: a physics-based energy mod
 
 ## 🔥 The problem we solve
 
-**Indian Railways** — the world's 4th-largest network — runs on largely manual, energy-blind traffic decisions:
+Dense railway networks still run on largely **manual, energy-blind** traffic decisions:
 
-| Problem | Scale | Annual cost |
-|---|---|---|
-| **Train conflicts** | 500–1,000 daily | ₹5,000+ Crore in delays |
-| **Energy waste** | 5–10 % of consumption | ₹2,000+ Crore wasted |
-| **Manual decisions** | 100 % human-dependent | inconsistent, slow |
-| **Cascade delays** | 1 delay → 10+ trains | passenger dissatisfaction |
-| **Traction electricity** | 70 M kWh / day | ₹20,000+ Crore / year |
-
-Station masters make split-second routing calls with no data and **no energy optimisation**; unnecessary stops of heavy trains burn hundreds of kWh each. 23 M daily passengers feel the delays; the network emits ~4 M tons CO₂/year.
-
-## 📊 Market & opportunity
-
-| Metric | Value |
+| Problem | Scale |
 |---|---|
-| Indian Railways revenue | ₹2.4 Lakh Crore |
-| Annual traction electricity | ₹20,000+ Crore |
-| Daily passengers / trains | 23 M / 13,000+ |
-| Network · electrified | 68,000+ km · 46,000+ km |
-| Global railway-AI market | $3.2 B (2024) → $12.8 B (2030), 26.3 % CAGR |
+| **Train conflicts** | hundreds–thousands daily on a busy network |
+| **Energy waste** | ~5–10 % of traction energy, much of it from unnecessary stop/restart cycles |
+| **Manual decisions** | human dispatchers, no per-decision energy optimisation |
+| **Cascade delays** | one conflict can ripple to 10+ trains |
 
-**Where NeuralRail fits:** existing systems (manual signalling, CRIS, NTES) track and manage data but **don't optimise**; foreign systems (Siemens/Alstom) are expensive and not India-specific. NeuralRail is **AI-driven, energy-first, and India-specific** — a learned controller, not a rulebook.
+Controllers make split-second routing calls with no data and **no energy objective**; stopping and restarting a heavy train burns hundreds of kWh each time. Passengers feel the delays, and the avoidable energy is pure cost and CO₂.
+
+## 📊 Opportunity
+
+The global **railway-AI / smart-signalling market** is growing fast (~$3.2 B in 2024 → ~$12.8 B by 2030, ≈26 % CAGR). Existing tools mostly **track and manage** traffic; they don't **optimise** it, and none treat **energy** as a first-class objective. NeuralRail is a *learned* controller — energy-first, and trainable on any network topology.
 
 ---
 
@@ -105,7 +94,7 @@ We trained the `basic_control` task to convergence (204,800 steps). The agent **
 
 - **Live network map** — trains glide between blocks, signals switch aspect, contention zones pulse.
 - **Agent decision feed** — every hold/release with a plain-English reason.
-- **Energy & throughput KPIs** — kWh / ₹ / CO₂, delay, collisions, on-time.
+- **Energy & throughput KPIs** — energy / cost / CO₂, delay, collisions, on-time.
 - **Controller toggle** — RL · greedy · no-control · random · manual (what-if overrides).
 - **Agent-vs-baseline compare** and a **training-proof** panel rendering the real curves.
 
@@ -113,38 +102,31 @@ We trained the `basic_control` task to convergence (204,800 steps). The agent **
 
 ## 📈 Measurable impact
 
-**Measured (simulation, trained agent · `basic_control`):** episode energy **240 → 111 kWh** (−54 %), 100 % on-time, 0 collisions.
+**Measured (simulation, trained agent · `basic_control`):** episode energy **240 → 111 kWh (−54 %)**, 100 % on-time, 0 collisions.
 
-**Projected at Indian-Railways scale** _(illustrative — model estimates; assumptions: 500 conflicts/day, 365 days, ₹5/kWh, 0.8 kg CO₂/kWh)_:
+At network scale, the same per-decision saving compounds — avoiding unnecessary heavy-train stops cuts **GWh of traction energy and thousands of tonnes of CO₂ per year** (model estimate; depends on traffic and tariffs). The agent delivers this **without trading off** punctuality or safety.
 
-| Metric | Annual value |
-|---|---|
-| Energy saved | ~63.9 GWh |
-| Cost saved | ~₹319 Crore |
-| CO₂ reduced | ~51,000 tons |
-| Equivalent | ~58,000 homes powered · ~2.3 M trees |
+## 💰 How it could be used
 
-## 💰 Business model
-
-- **B2G (primary)** — SaaS licence per division (~₹50 L/division/yr) + energy-savings share; setup + maintenance contracts. Customer: Indian Railways.
-- **B2C (secondary)** — freemium passenger app (eco-stats, premium analytics).
-- **B2B (future)** — metro systems, dedicated freight corridors, ASEAN export.
+- **Operator decision-support** — a per-section advisor / autonomous controller for traffic-control centres (SaaS per section, optional energy-savings share).
+- **Planning & simulation** — what-if analysis of timetables and signalling strategies before deployment.
+- **Adjacent networks** — metros and dedicated freight corridors with the same energy-vs-throughput trade-off.
 
 ---
 
 ## 🧩 Built on prior work — and substantially extended
 
-Per FAR AWAY's rules, this fuses **two of our own previous projects** into one significantly new system:
+This project **combines and significantly extends two of our earlier projects**:
 
-| Prior project | Reused | New for FAR AWAY |
+| Prior project | Reused | What's new |
 |---|---|---|
-| **NeuralRail** (GDG) — web dashboard + a *rule-based* optimizer (then mislabelled "RL") | physics-based **energy model** + Indian-Railways framing | energy folded into an **RL reward** |
-| **railway_controller_gym_env** — a real RL *environment* with **no trained agent** | the simulator core (network, block-signalling, collisions) | extracted to a pure in-process sim, wrapped as **Gymnasium**, and a **real PPO agent trained** on it |
+| **NeuralRail** — web dashboard + a *rule-based* optimizer (then mislabelled "RL") | the physics-based **energy model** | energy folded into an **RL reward** |
+| **railway-controller env** — a real RL *environment* with **no trained agent** | the simulator core (network, block-signalling, collisions) | extracted to a pure in-process sim, wrapped as **Gymnasium**, and a **real PPO agent trained** on it |
 
 **New work here:** a trainable Gymnasium env with action masking, the energy-aware reward (incl. a reward-hacking/stall fix), a MaskablePPO training pipeline, baselines + evaluation, a FastAPI + WebSocket live server, and a bespoke React control-room UI. The "RL agent" is now **literally true**, and the commit history shows it being built.
 
 ### What's real vs simulated
-- **Real:** trained PPO policy + checkpoint; physics energy model (KE, 30 % regen, idle, restart); multi-train simulator with block-signalling & collision detection; ₹/CO₂ conversions.
+- **Real:** trained PPO policy + checkpoint; physics energy model (KE, 30 % regen, idle, restart); multi-train simulator with block-signalling & collision detection.
 - **Simulated:** stylised network, synthetic scenarios, model-estimated savings — not live-track measurements.
 
 ---
@@ -166,7 +148,7 @@ The demo runs on baselines out of the box; with a trained `models/<task>/best.zi
 ## 🧪 Train your own agent (GPU)
 See **[TRAINING.md](TRAINING.md)**:
 ```bash
-python -m training.train_ppo --task basic_control     # ~minutes on an RTX 4050
+python -m training.train_ppo --task basic_control     # ~minutes on a modern GPU
 python -m eval.run_eval --task all                    # RL-vs-baseline table + energy KPIs
 ```
 
@@ -177,7 +159,7 @@ Gymnasium env (env/) ──imported by both──┐
    │  physics/ (energy model + specs)    └─► server/   → FastAPI + WebSocket
                                                           │
                                                           ▼
-                                          web/ (React CTC dashboard, served as static)
+                                          web/ (React control-room dashboard, served as static)
 ```
 
 ## 🛠️ Tech stack
@@ -186,23 +168,18 @@ Python · Gymnasium · **MaskablePPO (stable-baselines3 / sb3-contrib)** · PyTo
 ## 📁 Repo structure
 ```
 sim/        pure railway simulator (block-signalling, collisions)
-physics/    energy model + vendored rolling-stock specs/constants
+physics/    energy model + rolling-stock specs/constants
 env/        Gymnasium wrapper · obs encoder · action codec (masking) · energy-aware reward
 training/   MaskablePPO pipeline + curves      eval/  baselines + evaluation harness
-server/     FastAPI + WebSocket live server     web/   React CTC control-room UI
+server/     FastAPI + WebSocket live server     web/   React control-room UI
 models/     trained checkpoints + performance.png + training_curves.json
 docs/        figures + demo media used in this README
 ```
 
 ## 🗺️ Roadmap
-- **Phase 1 — Simulation (now):** trained agent on `basic_control`, live dashboard, full curriculum next (`junction → rush_hour`).
-- **Phase 2 — Decision-support tool:** what-if overrides, exportable reports, NTES data feed.
-- **Phase 3 (out of scope; years + certification):** real signalling integration (HIL testing, safety approval — cf. Kavach's ~5-year timeline).
-
-## 👥 Team
-**Team Curiosity** — GDG Pune · AI Hackathon. Built for **FAR AWAY 2026**, for Indian Railways and the environment.
-
----
+- **Phase 1 — Simulation (now):** trained agent on `basic_control`, live dashboard; full curriculum next (`junction → rush_hour`).
+- **Phase 2 — Decision-support tool:** what-if overrides, exportable reports, live data-feed integration.
+- **Phase 3 (out of scope; years + safety certification):** real signalling integration (hardware-in-the-loop testing and safety approval).
 
 ## ⚠️ Disclaimer
 Decision-support & research simulation only — **not** connected to, and **not** for control of, real railway signalling or trains.

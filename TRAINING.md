@@ -33,7 +33,7 @@ Compare `ablation.zip` (delay-only) vs `best.zip` (energy-aware) in eval — the
 ```bash
 python -m eval.run_eval --task all --seeds 50      # prints the comparison table + writes eval/results.csv
 ```
-This is the headline pitch table: arrival % · collisions · delay · **energy kWh / ₹ / CO₂**, RL vs no-control / random / greedy.
+This is the headline pitch table: arrival % · collisions · delay · **energy kWh / cost / CO₂**, RL vs no-control / random / greedy.
 
 ## 5. Ship the trained agent
 Commit the checkpoints so the live demo uses RL:

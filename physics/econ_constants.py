@@ -1,13 +1,12 @@
 """
 Economic / environmental conversion constants.
 
-Vendored from NeuralRail's impact framing (README): Indian Railways traction
-electricity at ~₹5 / kWh, and a grid emissions factor of ~0.8 kg CO₂ / kWh.
-These turn the physics-based kWh figures into the ₹ and CO₂ KPIs shown in the UI
-and used in the agent-vs-baseline pitch numbers.
+Approximate traction electricity at ~5 / kWh and a grid emissions factor of
+~0.8 kg CO₂ / kWh turn the physics-based kWh figures into the cost and CO₂ KPIs
+shown in the UI and used in the agent-vs-baseline numbers.
 """
 
-PRICE_PER_KWH_INR = 5.0      # ₹ per kWh (IR traction electricity, approx.)
+PRICE_PER_KWH_INR = 5.0      # currency units per kWh (traction electricity, approx.)
 CO2_KG_PER_KWH = 0.8         # kg CO₂ per kWh (grid factor, approx.)
 
 
