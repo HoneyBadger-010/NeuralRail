@@ -1,0 +1,44 @@
+# PPO (MaskablePPO) hyperparameters per task. CLI flags override these.
+# Curriculum order: basic_control -> express_priority -> junction_management -> rush_hour.
+# Wall-clock targets are for a single RTX 4050 (CUDA auto-detected).
+
+defaults: &defaults
+  policy: MlpPolicy
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.01
+  learning_rate: 0.0003
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  n_envs: 8
+
+basic_control:
+  <<: *defaults
+  net_arch: [128, 128]
+  total_timesteps: 300000
+  n_steps: 1024
+  batch_size: 2048
+
+express_priority:
+  <<: *defaults
+  net_arch: [256, 256]
+  total_timesteps: 1000000
+  n_steps: 1024
+  batch_size: 2048
+
+junction_management:
+  <<: *defaults
+  net_arch: [256, 256]
+  total_timesteps: 1500000
+  n_steps: 2048
+  batch_size: 4096
+
+rush_hour:
+  <<: *defaults
+  net_arch: [256, 256]
+  total_timesteps: 2000000
+  n_steps: 2048
+  batch_size: 4096
+  ent_coef: 0.02   # more exploration for the hardest task

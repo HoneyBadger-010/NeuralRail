@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# RL training artifacts
+runs/
+tensorboard/
+*.log
+eval/results.csv
+# (model checkpoints + training_curves.json under models/ ARE committed for serving)
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Node / frontend
+node_modules/
+web/dist/
+web/.vite/
+
+# OS
+.DS_Store
+Thumbs.db

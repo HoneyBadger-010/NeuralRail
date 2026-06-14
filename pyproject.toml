@@ -1,0 +1,34 @@
+[project]
+name = "neuralrail-rl"
+version = "0.1.0"
+description = "Energy-aware autonomous railway traffic controller (RL) — FAR AWAY 2026"
+requires-python = ">=3.10"
+# Core deps needed to run the simulator + Gymnasium env + serving.
+# Heavy / env-specific training deps (torch, stable-baselines3, sb3-contrib,
+# tensorboard) are installed separately so CPU-only serving stays lean.
+dependencies = [
+    "gymnasium>=0.29",
+    "numpy>=1.26",
+    "pydantic>=2.5",
+    "pyyaml>=6.0",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+train = [
+    "stable-baselines3>=2.3",
+    "sb3-contrib>=2.3",
+    "tensorboard>=2.15",
+]
+serve = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "websockets>=12.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["configs", "sim", "physics", "env", "agents", "training", "eval", "server"]
