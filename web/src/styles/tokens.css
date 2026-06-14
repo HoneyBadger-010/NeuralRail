@@ -1,0 +1,61 @@
+/* ============================================================================
+   NeuralRail CTC — design tokens
+   Aesthetic: a Centralized Traffic Control signalling desk. Warm graphite,
+   diegetic signalling colours, hi-vis safety-orange spot, energy on its own
+   teal scale. Mono-forward instrument readouts.
+   ========================================================================= */
+:root {
+  /* --- warm graphite surfaces (NOT cool navy) --- */
+  --bg-0: #131110;          /* deepest — app background */
+  --bg-1: #1b1815;          /* panel */
+  --bg-2: #221e1a;          /* raised panel / header */
+  --inset: #0d0c0b;         /* recessed wells (map bg, inputs) */
+
+  /* --- warm ink --- */
+  --ink-0: #ece5d8;         /* primary text */
+  --ink-1: #a89f90;         /* secondary */
+  --ink-2: #6f685d;         /* tertiary / disabled */
+  --hair: rgba(236, 229, 216, 0.09);   /* hairline dividers */
+  --hair-strong: rgba(236, 229, 216, 0.16);
+
+  /* --- diegetic signalling palette (signals + train status ONLY) --- */
+  --sig-green: #46c46a;
+  --sig-amber: #f0b133;
+  --sig-red: #e8524c;
+  --sig-green-glow: rgba(70, 196, 106, 0.55);
+  --sig-amber-glow: rgba(240, 177, 51, 0.55);
+  --sig-red-glow: rgba(232, 82, 76, 0.6);
+
+  /* --- brand spot: hi-vis railway safety orange (sparingly) --- */
+  --hv: #f4791f;
+  --hv-soft: rgba(244, 121, 31, 0.14);
+  --hv-line: rgba(244, 121, 31, 0.4);
+
+  /* --- energy scale: cool teal -> amber (separate from signalling) --- */
+  --en-good: #2fbfb0;       /* low energy / savings */
+  --en-warn: #d8a23a;       /* high energy / waste */
+  --en-soft: rgba(47, 191, 176, 0.14);
+
+  /* --- train class colours --- */
+  --t-hs: #5ea0ff;          /* high-speed */
+  --t-ex: #c98bff;          /* express */
+  --t-reg: #9fb0a0;         /* regular */
+  --t-frt: #c98a5a;         /* freight */
+
+  /* --- type --- */
+  --font-display: "Saira", system-ui, sans-serif;
+  --font-cond: "Saira Condensed", "Saira", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* --- geometry --- */
+  --r: 2px;                 /* square instrument corners */
+  --r-lg: 4px;
+  --gap: 14px;
+
+  --shadow: 0 1px 0 rgba(236,229,216,0.04) inset, 0 8px 24px -16px rgba(0,0,0,0.8);
+}
+
+/* Status -> colour helpers (used via inline style or class) */
+.sig-green { color: var(--sig-green); }
+.sig-amber { color: var(--sig-amber); }
+.sig-red   { color: var(--sig-red); }

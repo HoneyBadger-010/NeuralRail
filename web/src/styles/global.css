@@ -1,0 +1,85 @@
+@import "./tokens.css";
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1200px 600px at 70% -10%, rgba(244, 121, 31, 0.05), transparent 60%),
+    var(--bg-0);
+  color: var(--ink-0);
+  font-family: var(--font-display);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+/* faint engineering grid behind everything */
+#root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--hair) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hair) 1px, transparent 1px);
+  background-size: 46px 46px;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+h1, h2, h3, h4 { margin: 0; font-weight: 600; }
+
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.tnum { font-variant-numeric: tabular-nums; }
+
+/* uppercase letter-spaced micro-label — the instrument-panel voice */
+.label {
+  font-family: var(--font-cond);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.panel {
+  background: var(--bg-1);
+  border: 1px solid var(--hair);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow);
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--hair);
+  background: linear-gradient(180deg, rgba(236,229,216,0.02), transparent);
+}
+
+/* scrollbars — thin, on-theme */
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-thumb { background: var(--hair-strong); border-radius: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+button { font-family: var(--font-cond); cursor: pointer; }
+button:focus-visible { outline: 1px solid var(--hv); outline-offset: 1px; }
+
+/* a hi-vis hazard stripe used on the disclaimer / critical chips */
+.hazard {
+  background-image: repeating-linear-gradient(
+    -45deg, rgba(244,121,31,0.14) 0 8px, transparent 8px 16px
+  );
+}
+
+@keyframes pulse-ring {
+  0% { opacity: 0.9; transform: scale(0.9); }
+  70% { opacity: 0; transform: scale(1.8); }
+  100% { opacity: 0; transform: scale(1.8); }
+}
+@keyframes blink { 50% { opacity: 0.35; } }
